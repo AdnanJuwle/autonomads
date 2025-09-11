@@ -1123,7 +1123,7 @@ body {
 .bio-section p {
     color: var(--terminal-text-dim);
     line-height: 1.8;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     font-size: 1.125rem;
     text-align: justify;
 }
