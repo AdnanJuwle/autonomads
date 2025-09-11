@@ -25,12 +25,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Mobile Side Panel Functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileSidePanel = document.getElementById('mobileSidePanel');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const closePanelBtn = document.getElementById('closePanelBtn');
+    const sidePanelNavItems = document.querySelectorAll('.side-panel-nav .nav-item');
+    
+    function openMobilePanel() {
+        mobileSidePanel.classList.add('active');
+        mobileOverlay.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobilePanel() {
+        mobileSidePanel.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Event listeners for mobile panel
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMobilePanel);
+    }
+    
+    if (closePanelBtn) {
+        closePanelBtn.addEventListener('click', closeMobilePanel);
+    }
+    
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobilePanel);
+    }
+    
+    // Side panel navigation
+    sidePanelNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const targetSection = item.dataset.section;
+            switchSection(targetSection);
+            closeMobilePanel();
+        });
+    });
+    
     function switchSection(sectionName) {
         // Update navigation
         navItems.forEach(item => {
             item.classList.remove('active');
         });
         document.querySelector(`[data-section="${sectionName}"]`).classList.add('active');
+        
+        // Update side panel navigation
+        sidePanelNavItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        document.querySelector(`.side-panel-nav [data-section="${sectionName}"]`).classList.add('active');
         
         // Update content sections
         contentSections.forEach(section => {

@@ -62,6 +62,19 @@ body {
     border-bottom: 1px solid var(--terminal-border);
 }
 
+/* Hide mobile menu button on desktop */
+.mobile-menu-btn {
+    display: none;
+}
+
+.mobile-side-panel {
+    display: none;
+}
+
+.mobile-overlay {
+    display: none;
+}
+
 /* Portfolio Subheader */
 .portfolio-subheader {
     position: fixed;
@@ -1528,13 +1541,178 @@ body {
 
 /* Enhanced Mobile Responsive Design - Only affects mobile browsers */
 @media (max-width: 768px) {
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: var(--terminal-text);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        transform-origin: 1px;
+    }
+    
+    .mobile-menu-btn.active span:first-child {
+        transform: rotate(45deg);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:last-child {
+        transform: rotate(-45deg);
+    }
+    
+    /* Hide desktop navigation on mobile */
+    .terminal-nav {
+        display: none;
+    }
+    
+    /* Mobile Side Panel */
+    .mobile-side-panel {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        background: var(--terminal-bg);
+        border-right: 1px solid var(--terminal-border);
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+    
+    .mobile-side-panel.active {
+        left: 0;
+    }
+    
+    .side-panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-lg);
+        border-bottom: 1px solid var(--terminal-border);
+        background: var(--terminal-surface);
+    }
+    
+    .side-panel-header .terminal-title {
+        font-size: 0.9rem;
+        color: var(--terminal-text);
+    }
+    
+    .close-panel-btn {
+        background: none;
+        border: none;
+        color: var(--terminal-text);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .side-panel-nav {
+        padding: var(--space-lg);
+    }
+    
+    .side-panel-nav .nav-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        padding: var(--space-lg);
+        margin-bottom: var(--space-sm);
+        background: var(--terminal-surface);
+        border: 1px solid var(--terminal-border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+    
+    .side-panel-nav .nav-item:hover {
+        background: var(--primary);
+        color: var(--terminal-bg);
+        border-color: var(--primary);
+    }
+    
+    .side-panel-nav .nav-item.active {
+        background: var(--secondary);
+        color: var(--terminal-bg);
+        border-color: var(--secondary);
+    }
+    
+    .side-panel-nav .nav-prompt {
+        color: var(--terminal-accent);
+        font-weight: 600;
+    }
+    
+    .side-panel-nav .nav-command {
+        font-family: var(--font-mono);
+        font-weight: 500;
+    }
+    
+    /* Mobile Overlay */
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Mobile Header - Compact */
+    .terminal-header {
+        height: 60px;
+    }
+    
+    .terminal-bar {
+        padding: var(--space-sm) var(--space-md);
+        justify-content: space-between;
+    }
+    
+    .terminal-controls {
+        display: none;
+    }
+    
+    .terminal-title {
+        font-size: 0.8rem;
+    }
+    
+    /* Main Content - No top margin on mobile */
+    .main-content {
+        margin-top: 60px;
+        padding: var(--space-md);
+    }
+    
     /* Dual Header Mobile Layout */
     .portfolio-subheader {
         top: 60px;
-    }
-    
-    .main-content {
-        margin-top: 120px;
     }
     
     /* Terminal Navigation Mobile */

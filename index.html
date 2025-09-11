@@ -18,6 +18,12 @@
                 <span class="control maximize"></span>
             </div>
             <div class="terminal-title">autonomads@terminal:~$</div>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <nav class="terminal-nav">
             <div class="nav-item active" data-section="home">
@@ -38,6 +44,35 @@
             </div>
         </nav>
     </header>
+
+    <!-- Mobile Side Panel -->
+    <div class="mobile-side-panel" id="mobileSidePanel">
+        <div class="side-panel-header">
+            <div class="terminal-title">autonomads@terminal:~$</div>
+            <button class="close-panel-btn" id="closePanelBtn">&times;</button>
+        </div>
+        <nav class="side-panel-nav">
+            <div class="nav-item active" data-section="home">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./start.sh</span>
+            </div>
+            <div class="nav-item" data-section="team">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./team.sh</span>
+            </div>
+            <div class="nav-item" data-section="projects">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./projects.sh</span>
+            </div>
+            <div class="nav-item" data-section="about">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./about.sh</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- Main Content -->
     <main class="main-content">
