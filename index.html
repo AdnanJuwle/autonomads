@@ -250,6 +250,10 @@
                             <span class="tech-tag">IoT</span>
                             <span class="tech-tag">Computer Vision</span>
                         </div>
+                        <button class="project-details-btn" data-project="prana">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
 
@@ -271,6 +275,10 @@
                             <span class="tech-tag">Automation</span>
                             <span class="tech-tag">AI</span>
                         </div>
+                        <button class="project-details-btn" data-project="automata">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
 
@@ -292,6 +300,10 @@
                             <span class="tech-tag">Coordination</span>
                             <span class="tech-tag">Communication</span>
                         </div>
+                        <button class="project-details-btn" data-project="droneswarm">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
 
@@ -313,6 +325,10 @@
                             <span class="tech-tag">Sensors</span>
                             <span class="tech-tag">Smart Materials</span>
                         </div>
+                        <button class="project-details-btn" data-project="batman">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
 
@@ -334,6 +350,10 @@
                             <span class="tech-tag">Safety Systems</span>
                             <span class="tech-tag">IoT</span>
                         </div>
+                        <button class="project-details-btn" data-project="batpod">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
 
@@ -355,6 +375,10 @@
                             <span class="tech-tag">Smart City</span>
                             <span class="tech-tag">Sensors</span>
                         </div>
+                        <button class="project-details-btn" data-project="street-light">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -405,6 +429,45 @@
             </div>
         </section>
     </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Details</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <div class="project-status-modal">
+                        <span id="modalStatus" class="status-badge"></span>
+                    </div>
+                    <div class="project-description">
+                        <h3>Description</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div class="tech-stack">
+                        <h3>Technology Stack</h3>
+                        <div id="modalTech"></div>
+                    </div>
+                    <div class="timeline">
+                        <h3>Project Timeline</h3>
+                        <div id="modalTimeline"></div>
+                    </div>
+                    <div class="team-members">
+                        <h3>Team Members</h3>
+                        <div id="modalTeam"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="modalActions"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
