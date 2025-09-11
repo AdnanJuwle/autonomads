@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
 .container {
@@ -62,6 +63,9 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: block;
 }
 
 .nav-link:hover {
@@ -785,45 +789,127 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-menu {
+    .nav-container {
         flex-direction: column;
         gap: 1rem;
+        padding: 1rem 20px;
+    }
+    
+    .nav-menu {
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
     }
     
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 10px;
     }
     
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
     
     .team-card {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .team-image img {
+        height: 250px;
     }
     
     .portfolio-profile {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-image img {
+        height: 250px;
+    }
+    
+    .portfolio-name {
+        font-size: 2rem;
+    }
+    
+    .portfolio-role {
+        font-size: 1.1rem;
     }
     
     .modal-body {
         grid-template-columns: 1fr;
+        padding: 1.5rem;
     }
     
     .modal-content {
         width: 95%;
-        margin: 10% auto;
+        margin: 5% auto;
+        max-height: 90vh;
+    }
+    
+    .modal-header {
+        padding: 1rem 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .team-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .back-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
     }
 }
 
@@ -832,27 +918,225 @@ section {
         padding: 0 15px;
     }
     
+    .nav-container {
+        padding: 0.8rem 15px;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+    }
+    
     .hero {
-        padding: 100px 0 60px;
+        padding: 80px 0 50px;
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        padding: 0 5px;
+    }
+    
+    .btn {
+        width: 180px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
     
     .page-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
     }
     
     .team-member {
-        padding: 1.5rem;
+        padding: 1.2rem;
+    }
+    
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .team-member h4 {
+        font-size: 1.1rem;
+    }
+    
+    .team-member p {
+        font-size: 0.9rem;
     }
     
     .project-card {
-        margin: 0 10px;
+        margin: 0 5px;
+    }
+    
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-content p {
+        font-size: 0.9rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .team-card {
+        padding: 1.2rem;
+    }
+    
+    .team-image img {
+        height: 200px;
+    }
+    
+    .team-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .team-role {
+        font-size: 1rem;
+    }
+    
+    .team-bio {
+        font-size: 0.9rem;
+    }
+    
+    .portfolio-profile {
+        gap: 1.5rem;
+    }
+    
+    .profile-image img {
+        height: 200px;
+    }
+    
+    .portfolio-name {
+        font-size: 1.8rem;
+    }
+    
+    .portfolio-role {
+        font-size: 1rem;
+    }
+    
+    .portfolio-bio {
+        font-size: 0.9rem;
+    }
+    
+    .profile-skills {
+        gap: 0.3rem;
+    }
+    
+    .profile-social {
+        gap: 0.8rem;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .modal-content {
+        width: 98%;
+        margin: 2% auto;
+    }
+    
+    .modal-header {
+        padding: 0.8rem 1rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-image img {
+        height: 200px;
+    }
+    
+    .back-button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .page-title {
+        font-size: 1.6rem;
+    }
+    
+    .btn {
+        width: 160px;
+        font-size: 0.8rem;
+    }
+    
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-image img {
+        height: 180px;
+    }
+    
+    .team-image img {
+        height: 180px;
     }
 }
