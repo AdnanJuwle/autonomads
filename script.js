@@ -98,10 +98,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function switchSection(sectionName) {
         console.log('Switching to section:', sectionName);
         
-        // Handle home navigation - redirect to main site
-        if (sectionName === 'home') {
-            window.location.href = 'index.html';
-            return;
+        // Handle main page sections when on portfolio pages
+        if (window.location.pathname.includes('portfolio-')) {
+            if (sectionName === 'home') {
+                window.location.href = 'index.html';
+                return;
+            } else if (['team', 'projects', 'about'].includes(sectionName)) {
+                // Redirect to main page with the specific section
+                window.location.href = `index.html#${sectionName}`;
+                return;
+            }
         }
         
         // Update navigation
