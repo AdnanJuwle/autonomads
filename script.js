@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const projectData = {
     'prana': {
         title: 'Prana Soil Analysis Rover',
-        image: 'automata.png',
+        image: 'automata.jpg',
         status: 'Research Phase',
         statusClass: 'status-research',
         description: 'AI-powered autonomous rover for comprehensive soil analysis and agricultural insights. The rover will analyze soil composition, moisture levels, pH, nutrient content, and other critical agricultural parameters to provide farmers with actionable insights for optimal crop management.',
@@ -39,7 +39,7 @@ const projectData = {
     },
     'automata': {
         title: 'Automata Planting & Weeding Rover',
-        image: 'automata.png',
+        image: 'automata.jpg',
         status: 'In Development',
         statusClass: 'status-development',
         description: 'Autonomous agricultural rover for precision planting and intelligent weed management. The rover will use computer vision to identify weeds, perform precision planting, and maintain crops with minimal human intervention.',
@@ -112,7 +112,7 @@ const projectData = {
     },
     'street-light': {
         title: 'Smart Street Light System',
-        image: 'automata.png',
+        image: 'automata.jpg',
         status: 'Research Phase',
         statusClass: 'status-research',
         description: 'Intelligent street lighting system with adaptive brightness, energy efficiency, and IoT connectivity. The system will feature motion detection, weather adaptation, remote monitoring, and integration with smart city infrastructure.',
