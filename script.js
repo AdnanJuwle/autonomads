@@ -33,36 +33,63 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidePanelNavItems = document.querySelectorAll('.side-panel-nav .nav-item');
     
     function openMobilePanel() {
-        mobileSidePanel.classList.add('active');
-        mobileOverlay.classList.add('active');
-        mobileMenuBtn.classList.add('active');
+        console.log('Opening mobile panel');
+        if (mobileSidePanel) mobileSidePanel.classList.add('active');
+        if (mobileOverlay) mobileOverlay.classList.add('active');
+        if (mobileMenuBtn) mobileMenuBtn.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
     
     function closeMobilePanel() {
-        mobileSidePanel.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
+        console.log('Closing mobile panel');
+        if (mobileSidePanel) mobileSidePanel.classList.remove('active');
+        if (mobileOverlay) mobileOverlay.classList.remove('active');
+        if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
         document.body.style.overflow = '';
     }
     
     // Event listeners for mobile panel
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', openMobilePanel);
+        console.log('Mobile menu button found');
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openMobilePanel();
+        });
+    } else {
+        console.log('Mobile menu button NOT found');
     }
     
     if (closePanelBtn) {
-        closePanelBtn.addEventListener('click', closeMobilePanel);
+        console.log('Close panel button found');
+        closePanelBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeMobilePanel();
+        });
+    } else {
+        console.log('Close panel button NOT found');
     }
     
     if (mobileOverlay) {
-        mobileOverlay.addEventListener('click', closeMobilePanel);
+        console.log('Mobile overlay found');
+        mobileOverlay.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeMobilePanel();
+        });
+    } else {
+        console.log('Mobile overlay NOT found');
     }
     
     // Side panel navigation
-    sidePanelNavItems.forEach(item => {
-        item.addEventListener('click', () => {
+    sidePanelNavItems.forEach((item, index) => {
+        console.log(`Side panel nav item ${index} found`);
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             const targetSection = item.dataset.section;
+            console.log('Side panel nav clicked:', targetSection);
             switchSection(targetSection);
             closeMobilePanel();
         });
@@ -73,19 +100,22 @@ document.addEventListener('DOMContentLoaded', function() {
         navItems.forEach(item => {
             item.classList.remove('active');
         });
-        document.querySelector(`[data-section="${sectionName}"]`).classList.add('active');
+        const activeNavItem = document.querySelector(`[data-section="${sectionName}"]`);
+        if (activeNavItem) activeNavItem.classList.add('active');
         
         // Update side panel navigation
         sidePanelNavItems.forEach(item => {
             item.classList.remove('active');
         });
-        document.querySelector(`.side-panel-nav [data-section="${sectionName}"]`).classList.add('active');
+        const activeSideNavItem = document.querySelector(`.side-panel-nav [data-section="${sectionName}"]`);
+        if (activeSideNavItem) activeSideNavItem.classList.add('active');
         
         // Update content sections
         contentSections.forEach(section => {
             section.classList.remove('active');
         });
-        document.getElementById(sectionName).classList.add('active');
+        const activeSection = document.getElementById(sectionName);
+        if (activeSection) activeSection.classList.add('active');
         
         // Update URL hash
         window.location.hash = sectionName;

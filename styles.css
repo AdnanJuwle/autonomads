@@ -1541,9 +1541,21 @@ body {
 
 /* Enhanced Mobile Responsive Design - Only affects mobile browsers */
 @media (max-width: 768px) {
+    /* Show mobile elements on mobile */
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+    
+    .mobile-side-panel {
+        display: block !important;
+    }
+    
+    .mobile-overlay {
+        display: block !important;
+    }
+    
     /* Mobile Menu Button */
     .mobile-menu-btn {
-        display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
