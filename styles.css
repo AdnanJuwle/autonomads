@@ -566,19 +566,22 @@ body {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-lg);
-    background: var(--primary);
+    padding: var(--space-md) var(--space-xl);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: var(--terminal-bg);
-    border: 1px solid var(--primary);
-    border-radius: 6px;
+    border: none;
+    border-radius: 8px;
     text-decoration: none;
     font-family: var(--font-mono);
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: var(--transition-normal);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .portfolio-btn::before {
@@ -588,8 +591,8 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
 }
 
 .portfolio-btn:hover::before {
@@ -597,20 +600,24 @@ body {
 }
 
 .portfolio-btn:hover {
-    background: transparent;
-    color: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 136, 255, 0.4);
+}
+
+.portfolio-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
 .portfolio-btn .btn-icon {
     color: var(--terminal-bg);
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 1rem;
 }
 
-.portfolio-btn:hover .btn-icon {
-    color: var(--primary);
+.portfolio-btn .btn-text {
+    font-weight: 700;
 }
 
 /* Projects Grid */
@@ -982,10 +989,22 @@ body {
     align-items: center;
     gap: var(--space-2xl);
     margin-bottom: var(--space-3xl);
-    background: var(--terminal-surface);
+    background: linear-gradient(135deg, var(--terminal-surface), rgba(0, 255, 136, 0.05));
     border: 1px solid var(--terminal-border);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
 }
 
 .profile-avatar {
@@ -994,17 +1013,19 @@ body {
 }
 
 .profile-avatar img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--terminal-border);
+    border: 4px solid var(--terminal-border);
     transition: var(--transition-normal);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .profile-header:hover .profile-avatar img {
     border-color: var(--primary);
     transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 255, 136, 0.3);
 }
 
 .profile-info {
@@ -1012,23 +1033,33 @@ body {
 }
 
 .profile-name {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 3rem;
+    font-weight: 900;
     color: var(--terminal-text);
     margin-bottom: var(--space-sm);
+    background: linear-gradient(135deg, var(--terminal-text), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .profile-role {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--primary);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: var(--space-md);
+    text-shadow: 0 2px 4px rgba(0, 255, 136, 0.3);
 }
 
 .profile-status {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--terminal-text-dim);
     font-family: var(--font-mono);
+    background: var(--terminal-bg);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 6px;
+    border: 1px solid var(--terminal-border);
+    display: inline-block;
 }
 
 .profile-content {
@@ -1038,60 +1069,143 @@ body {
 }
 
 .bio-section h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
     color: var(--terminal-text);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    position: relative;
+    text-align: center;
+}
+
+.bio-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
 }
 
 .bio-section p {
     color: var(--terminal-text-dim);
-    line-height: 1.7;
-    margin-bottom: var(--space-lg);
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+    font-size: 1.125rem;
+    text-align: justify;
+    background: var(--terminal-surface);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    border: 1px solid var(--terminal-border);
+    position: relative;
+}
+
+.bio-section p::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 3rem;
+    color: var(--primary);
+    font-family: serif;
+    opacity: 0.3;
+}
+
+.bio-section p::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    font-size: 3rem;
+    color: var(--primary);
+    font-family: serif;
+    opacity: 0.3;
 }
 
 .stats-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
 }
 
 .social-section h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--terminal-text);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    position: relative;
+}
+
+.social-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
 }
 
 .social-section .social-links {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
 }
 
 .social-section .social-link {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-md);
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-xl);
     background: var(--terminal-surface);
     border: 1px solid var(--terminal-border);
-    border-radius: 8px;
+    border-radius: 12px;
     color: var(--terminal-text-dim);
     text-decoration: none;
-    transition: var(--transition-normal);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-section .social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-section .social-link:hover::before {
+    left: 100%;
 }
 
 .social-section .social-link:hover {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: var(--terminal-bg);
     border-color: var(--primary);
-    transform: translateX(5px);
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
 }
 
 .social-section .social-link i {
-    font-size: 1.25rem;
-    width: 24px;
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.social-section .social-link span {
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 /* Skills Grid */
@@ -1279,20 +1393,26 @@ body {
     .profile-header {
         flex-direction: column;
         text-align: center;
-        gap: var(--space-lg);
+        gap: var(--space-xl);
+        padding: var(--space-xl);
     }
     
     .profile-name {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    .profile-role {
+        font-size: 1.25rem;
     }
     
     .profile-content {
         grid-template-columns: 1fr;
-        gap: var(--space-xl);
+        gap: var(--space-2xl);
     }
     
     .stats-section {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
     
     .skills-grid {
@@ -1300,8 +1420,17 @@ body {
     }
     
     .social-section .social-links {
-        flex-direction: row;
-        justify-content: center;
+        gap: var(--space-md);
+    }
+    
+    .social-section .social-link {
+        padding: var(--space-md) var(--space-lg);
+        gap: var(--space-md);
+    }
+    
+    .bio-section p {
+        padding: var(--space-lg);
+        font-size: 1rem;
     }
 }
 
@@ -1311,12 +1440,12 @@ body {
     }
     
     .profile-avatar img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
     
     .profile-name {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
     
     .profile-role {
@@ -1333,6 +1462,29 @@ body {
     
     .redirect-message h2 {
         font-size: 1.75rem;
+    }
+    
+    .bio-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .bio-section p {
+        padding: var(--space-md);
+        font-size: 0.95rem;
+    }
+    
+    .social-section .social-link {
+        padding: var(--space-sm) var(--space-md);
+        gap: var(--space-sm);
+    }
+    
+    .social-section .social-link i {
+        font-size: 1.25rem;
+        width: 24px;
+    }
+    
+    .social-section .social-link span {
+        font-size: 0.875rem;
     }
 }
     .terminal-main {
