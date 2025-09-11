@@ -4,6 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.nav-item');
     const contentSections = document.querySelectorAll('.content-section');
     
+    // Handle hash navigation on page load
+    function handleHashNavigation() {
+        const hash = window.location.hash.substring(1); // Remove the #
+        if (hash && document.getElementById(hash)) {
+            switchSection(hash);
+        }
+    }
+    
+    // Handle hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+    
+    // Check for hash on initial load
+    handleHashNavigation();
+    
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             const targetSection = item.dataset.section;
@@ -23,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             section.classList.remove('active');
         });
         document.getElementById(sectionName).classList.add('active');
+        
+        // Update URL hash
+        window.location.hash = sectionName;
         
         // Add terminal output for new section
         addTerminalOutput(sectionName);
