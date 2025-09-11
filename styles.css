@@ -63,9 +63,6 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    display: block;
 }
 
 .nav-link:hover {
@@ -787,7 +784,66 @@ section {
     opacity: 0.8;
 }
 
-/* Responsive Design */
+/* Desktop-first approach - ensure desktop styles are preserved */
+@media (min-width: 769px) {
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-menu {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: auto;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .team-card {
+        grid-template-columns: 300px 1fr;
+        text-align: left;
+    }
+    
+    .portfolio-profile {
+        grid-template-columns: 300px 1fr;
+        text-align: left;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        text-align: left;
+    }
+    
+    .social-links {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile and tablet styles */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -803,6 +859,9 @@ section {
     
     .nav-link {
         font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        display: block;
     }
     
     .hero {
