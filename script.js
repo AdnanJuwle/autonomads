@@ -3,11 +3,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation functionality
     const navItems = document.querySelectorAll('.nav-item');
     const contentSections = document.querySelectorAll('.content-section');
+    const sidePanelNavItems = document.querySelectorAll('.side-panel-nav .nav-item');
+    
+    // Simple navigation function
+    function switchSection(sectionName) {
+        console.log('Switching to section:', sectionName);
+        
+        // Update navigation
+        navItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        const activeNavItem = document.querySelector(`[data-section="${sectionName}"]`);
+        if (activeNavItem) {
+            activeNavItem.classList.add('active');
+        }
+        
+        // Update side panel navigation
+        sidePanelNavItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        const activeSideNavItem = document.querySelector(`.side-panel-nav [data-section="${sectionName}"]`);
+        if (activeSideNavItem) activeSideNavItem.classList.add('active');
+        
+        // Update content sections
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
+        const activeSection = document.getElementById(sectionName);
+        if (activeSection) {
+            activeSection.classList.add('active');
+        }
+        
+        // Update URL hash
+        window.location.hash = sectionName;
+        
+        // Add terminal output for new section
+        addTerminalOutput(sectionName);
+    }
     
     // Handle hash navigation on page load
     function handleHashNavigation() {
-        const hash = window.location.hash.substring(1); // Remove the #
+        const hash = window.location.hash.substring(1);
         if (hash && document.getElementById(hash)) {
+            // Always switch to the hash section, regardless of current state
             switchSection(hash);
         }
     }
@@ -18,6 +56,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for hash on initial load
     handleHashNavigation();
     
+    // Sync navigation state on page load
+    function syncNavigationState() {
+        const activeSection = document.querySelector('.content-section.active');
+        if (activeSection) {
+            const sectionId = activeSection.id;
+            // Update navigation to match active section
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            const activeNavItem = document.querySelector(`[data-section="${sectionId}"]`);
+            if (activeNavItem) {
+                activeNavItem.classList.add('active');
+            }
+        }
+    }
+    
+    // Sync navigation state
+    syncNavigationState();
+    
+    // Set up navigation listeners
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             const targetSection = item.dataset.section;
@@ -30,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileSidePanel = document.getElementById('mobileSidePanel');
     const mobileOverlay = document.getElementById('mobileOverlay');
     const closePanelBtn = document.getElementById('closePanelBtn');
-    const sidePanelNavItems = document.querySelectorAll('.side-panel-nav .nav-item');
     
     function openMobilePanel() {
         console.log('Opening mobile panel');
@@ -94,59 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
             closeMobilePanel();
         });
     });
-    
-    function switchSection(sectionName) {
-        console.log('Switching to section:', sectionName);
-        
-        // Handle main page sections when on portfolio pages
-        if (window.location.pathname.includes('portfolio-')) {
-            if (sectionName === 'home') {
-                window.location.href = 'index.html';
-                return;
-            } else if (['team', 'projects', 'about'].includes(sectionName)) {
-                // Redirect to main page with the specific section
-                window.location.href = `index.html#${sectionName}`;
-                return;
-            }
-        }
-        
-        // Update navigation
-        navItems.forEach(item => {
-            item.classList.remove('active');
-        });
-        const activeNavItem = document.querySelector(`[data-section="${sectionName}"]`);
-        if (activeNavItem) {
-            activeNavItem.classList.add('active');
-            console.log('Found and activated nav item:', activeNavItem);
-        } else {
-            console.log('No nav item found for section:', sectionName);
-        }
-        
-        // Update side panel navigation
-        sidePanelNavItems.forEach(item => {
-            item.classList.remove('active');
-        });
-        const activeSideNavItem = document.querySelector(`.side-panel-nav [data-section="${sectionName}"]`);
-        if (activeSideNavItem) activeSideNavItem.classList.add('active');
-        
-        // Update content sections
-        contentSections.forEach(section => {
-            section.classList.remove('active');
-        });
-        const activeSection = document.getElementById(sectionName);
-        if (activeSection) {
-            activeSection.classList.add('active');
-            console.log('Found and activated content section:', activeSection);
-        } else {
-            console.log('No content section found for:', sectionName);
-        }
-        
-        // Update URL hash
-        window.location.hash = sectionName;
-        
-        // Add terminal output for new section
-        addTerminalOutput(sectionName);
-    }
     
     function addTerminalOutput(sectionName) {
         const section = document.getElementById(sectionName);
