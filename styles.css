@@ -1698,13 +1698,13 @@ body {
         visibility: visible;
     }
     
-    /* Mobile Header - Compact */
+    /* Mobile Header - Ultra Compact */
     .terminal-header {
-        height: 60px;
+        height: 40px; /* Further reduced height */
     }
     
     .terminal-bar {
-        padding: var(--space-sm) var(--space-md);
+        padding: var(--space-xs) var(--space-sm);
         justify-content: space-between;
     }
     
@@ -1713,18 +1713,41 @@ body {
     }
     
     .terminal-title {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     
-    /* Main Content - No top margin on mobile */
+    /* Main Content - Ultra compact on mobile */
     .main-content {
-        margin-top: 60px;
+        margin-top: 40px; /* Adjusted for ultra compact header */
         padding: var(--space-md);
     }
     
-    /* Dual Header Mobile Layout */
+    /* Personal Portfolio Pages - Ultra Compact Headers */
+    .profile-container {
+        margin-top: var(--space-xs); /* Minimal top margin for personal portfolios */
+    }
+    
+    /* Dual Header Mobile Layout - Ultra Compact */
     .portfolio-subheader {
-        top: 60px;
+        top: 40px; /* Adjusted for ultra compact main header */
+        height: 30px; /* Reduced subheader height */
+    }
+    
+    .portfolio-subheader .terminal-bar {
+        padding: var(--space-xs) var(--space-sm);
+    }
+    
+    .portfolio-subheader .terminal-title {
+        font-size: 0.65rem;
+    }
+    
+    .portfolio-subheader .terminal-nav {
+        padding: var(--space-xs);
+    }
+    
+    .portfolio-subheader .nav-item {
+        font-size: 0.6rem;
+        padding: var(--space-xs);
     }
     
     /* Terminal Navigation Mobile */
@@ -2109,7 +2132,7 @@ body {
     
     /* Personal Portfolio Mobile Fixes */
     .profile-container {
-        margin-top: var(--space-lg); /* Reduced top margin */
+        margin-top: var(--space-sm); /* Further reduced top margin */
     }
     
     .profile-header {
