@@ -277,6 +277,7 @@ section {
 .project-image {
     height: 200px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .project-image img {
@@ -332,23 +333,34 @@ section {
     margin-top: 3rem;
 }
 
-/* Page Headers */
-.page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Back Button Styles */
+.back-button-container {
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-button:hover {
     color: white;
-    padding: 120px 0 80px;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
 }
 
-.page-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.page-subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
+.back-button i {
+    font-size: 0.9rem;
 }
 
 /* Team Section */
