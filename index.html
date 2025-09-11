@@ -3,140 +3,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomads - Home</title>
+    <title>Autonomads Terminal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Autonomads</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
-            </ul>
+    <!-- Terminal Navigation -->
+    <nav class="terminal-nav">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">autonomads@terminal:~$</div>
+        </div>
+        <div class="terminal-menu">
+            <div class="menu-item active" data-section="home">
+                <span class="prompt">></span>
+                <span class="command">./start.sh</span>
+            </div>
+            <div class="menu-item" data-section="team">
+                <span class="prompt">></span>
+                <span class="command">./team.sh</span>
+            </div>
+            <div class="menu-item" data-section="projects">
+                <span class="prompt">></span>
+                <span class="command">./projects.sh</span>
+            </div>
+            <div class="menu-item" data-section="about">
+                <span class="prompt">></span>
+                <span class="command">./about.sh</span>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <section class="hero">
+    <!-- Main Terminal Content -->
+    <main class="terminal-main">
+        <!-- Home Section -->
+        <section id="home" class="terminal-section active">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">autonomads@terminal:~$</span>
+                    <span class="command">./start.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Initializing Autonomads Terminal...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Loading autonomous systems...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Connecting to innovation network...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ System ready</span>
+                </div>
+            </div>
+
             <div class="hero-content">
-                <h1 class="hero-title">Autonomads</h1>
-                <p class="hero-subtitle">Building the Future of Autonomous Systems</p>
-                <p class="hero-description">
-                    We are a team of passionate engineers and developers creating innovative autonomous solutions 
-                    for real-world challenges. From AI-powered rovers to smart city infrastructure, 
-                    we're pushing the boundaries of what's possible.
-                </p>
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View Our Projects</a>
-                    <a href="team.html" class="btn btn-secondary">Meet the Team</a>
+                <div class="typing-container">
+                    <h1 class="hero-title">
+                        <span class="typing-text">Building the Future of</span>
+                        <span class="highlight-text">Autonomous Systems</span>
+                    </h1>
+                </div>
+                <div class="hero-description">
+                    <p>We are <span class="highlight">Autonomads</span> - a team of passionate engineers and developers creating innovative autonomous solutions for real-world challenges.</p>
+                    <p>From AI-powered rovers to smart city infrastructure, we're pushing the boundaries of what's possible.</p>
+                </div>
+                <div class="terminal-actions">
+                    <button class="terminal-btn primary" data-action="explore">
+                        <span class="btn-icon">></span>
+                        <span class="btn-text">Explore Projects</span>
+                    </button>
+                    <button class="terminal-btn secondary" data-action="team">
+                        <span class="btn-icon">></span>
+                        <span class="btn-text">Meet Team</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
                 </div>
             </div>
         </section>
 
-        <section class="team-showcase">
-            <div class="container">
-                <h2 class="section-title">Meet Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="adnan.avif" alt="Adnan Juwle">
-                        <h4>Adnan Juwle</h4>
-                        <p>AI Engineer & Machine Learning Developer</p>
-                        <a href="portfolio-adnan.html" class="btn btn-outline">View Portfolio</a>
+        <!-- Team Section -->
+        <section id="team" class="terminal-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">autonomads@terminal:~$</span>
+                    <span class="command">./team.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Loading team profiles...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Team data loaded</span>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card" data-member="adnan">
+                    <div class="card-header">
+                        <div class="member-avatar">
+                            <img src="adnan.avif" alt="Adnan Juwle">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Adnan Juwle</h3>
+                            <p class="member-role">AI Engineer & ML Developer</p>
+                            <div class="member-status">Status: <span class="status-text">Active</span></div>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <img src="juned.jpg" alt="Juned Jiya">
-                        <h4>Juned Jiya</h4>
-                        <p>Hardware Engineer & System Designer</p>
-                        <a href="portfolio-juned.html" class="btn btn-outline">View Portfolio</a>
+                    <div class="card-content">
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">Robotics</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">TensorFlow</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/AdnanJuwle" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/adnan-juwle-b04816246/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:adnanjuwle1@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <img src="siddhant.jpg" alt="Siddhant Khobaragade">
-                        <h4>Siddhant Khobaragade</h4>
-                        <p>Software Engineer & Developer</p>
-                        <a href="portfolio-siddhant.html" class="btn btn-outline">View Portfolio</a>
+                </div>
+
+                <div class="team-card" data-member="juned">
+                    <div class="card-header">
+                        <div class="member-avatar">
+                            <img src="juned.jpg" alt="Juned Jiya">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Juned Jiya</h3>
+                            <p class="member-role">Hardware Engineer</p>
+                            <div class="member-status">Status: <span class="status-text">Active</span></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Hardware Design</span>
+                                <span class="skill-tag">Embedded Systems</span>
+                                <span class="skill-tag">CAD</span>
+                                <span class="skill-tag">Arduino</span>
+                                <span class="skill-tag">AutoLISP</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/juned-sudo" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/juned-jiya/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:junedjiya377@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" data-member="siddhant">
+                    <div class="card-header">
+                        <div class="member-avatar">
+                            <img src="siddhant.jpg" alt="Siddhant Khobaragade">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Siddhant Khobaragade</h3>
+                            <p class="member-role">Software Engineer</p>
+                            <div class="member-status">Status: <span class="status-text">Active</span></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Full-Stack Dev</span>
+                                <span class="skill-tag">Mobile Dev</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/sid-vid" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sidvid/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:siddhant.ak04@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="projects-preview">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="automata.jpg" alt="Prana Soil Analysis Rover">
-                        <div class="project-content">
-                            <h3>Prana Soil Analysis Rover</h3>
-                            <p>AI-powered autonomous rover for comprehensive soil analysis and agricultural insights.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">AI/ML</span>
-                                <span class="tech-tag">Robotics</span>
-                                <span class="tech-tag">IoT</span>
-                            </div>
+        <!-- Projects Section -->
+        <section id="projects" class="terminal-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">autonomads@terminal:~$</span>
+                    <span class="command">./projects.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Scanning project repositories...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Found 6 active projects</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Projects loaded</span>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-project="prana">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Prana Soil Analysis Rover</h3>
+                            <p class="project-status">Status: <span class="status-badge research">Research Phase</span></p>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="batman.webp" alt="Batman Suit">
-                        <div class="project-content">
-                            <h3>Batman Suit</h3>
-                            <p>Advanced wearable technology suit with integrated sensors, communication systems, and smart features.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Wearable Tech</span>
-                                <span class="tech-tag">IoT</span>
-                                <span class="tech-tag">Sensors</span>
-                            </div>
+                    <div class="project-content">
+                        <p class="project-description">AI-powered autonomous rover for comprehensive soil analysis and agricultural insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Computer Vision</span>
                         </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="droneswarm.jpg" alt="Swarm Drone System">
-                        <div class="project-content">
-                            <h3>Swarm Drone System</h3>
-                            <p>Coordinated drone swarm for surveillance, mapping, and emergency response applications.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Swarm Intelligence</span>
-                                <span class="tech-tag">UAV</span>
-                                <span class="tech-tag">Coordination</span>
-                            </div>
-                        </div>
+                        <button class="project-btn" data-action="view-details">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
                     </div>
                 </div>
-                <div class="text-center">
-                    <a href="projects.html" class="btn btn-primary">View All Projects</a>
+
+                <div class="project-card" data-project="automata">
+                    <div class="project-header">
+                        <div class="project-icon">🌱</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Automata Planting & Weeding</h3>
+                            <p class="project-status">Status: <span class="status-badge development">In Development</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Autonomous agricultural rover for precision planting and intelligent weed management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                        <button class="project-btn" data-action="view-details">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="droneswarm">
+                    <div class="project-header">
+                        <div class="project-icon">🚁</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Swarm Drone System</h3>
+                            <p class="project-status">Status: <span class="status-badge planning">Planning Phase</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Coordinated drone swarm for surveillance, mapping, and emergency response applications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swarm Intelligence</span>
+                            <span class="tech-tag">UAV</span>
+                            <span class="tech-tag">Coordination</span>
+                            <span class="tech-tag">Communication</span>
+                        </div>
+                        <button class="project-btn" data-action="view-details">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="batman">
+                    <div class="project-header">
+                        <div class="project-icon">🦇</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Batman Suit</h3>
+                            <p class="project-status">Status: <span class="status-badge planning">Planning Phase</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Advanced wearable technology suit with integrated sensors and smart features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Wearable Tech</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">Smart Materials</span>
+                        </div>
+                        <button class="project-btn" data-action="view-details">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="batpod">
+                    <div class="project-header">
+                        <div class="project-icon">🏍️</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Batpod Bike</h3>
+                            <p class="project-status">Status: <span class="status-badge planning">Planning Phase</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Autonomous motorcycle with advanced navigation and smart connectivity features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Autonomous Vehicles</span>
+                            <span class="tech-tag">Navigation</span>
+                            <span class="tech-tag">Safety Systems</span>
+                            <span class="tech-tag">IoT</span>
+                        </div>
+                        <button class="project-btn" data-action="view-details">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="street-light">
+                    <div class="project-header">
+                        <div class="project-icon">💡</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Smart Street Light System</h3>
+                            <p class="project-status">Status: <span class="status-badge research">Research Phase</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Intelligent street lighting with adaptive brightness and IoT connectivity.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Energy Efficiency</span>
+                            <span class="tech-tag">Smart City</span>
+                            <span class="tech-tag">Sensors</span>
+                        </div>
+                        <button class="project-btn" data-action="view-details">
+                            <span class="btn-icon">></span>
+                            <span class="btn-text">View Details</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="terminal-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">autonomads@terminal:~$</span>
+                    <span class="command">./about.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Loading company information...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Data loaded</span>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Autonomads</h2>
+                    <p>We are a passionate team of engineers and developers dedicated to creating innovative autonomous solutions for real-world challenges. Our mission is to push the boundaries of what's possible with autonomous technology.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize industries through intelligent autonomous systems that enhance efficiency, safety, and sustainability.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>A future where autonomous technology seamlessly integrates into everyday life, making the world smarter and more connected.</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>adnanjuwle1@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Global Remote Team</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Founded 2025</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Autonomads</h3>
-                    <p>Building autonomous systems for a smarter future.</p>
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Details</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> adnanjuwle1@gmail.com</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/adnan-juwle-b04816246/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AdnanJuwle" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <div class="modal-info">
+                    <div class="project-status-modal">
+                        <span id="modalStatus" class="status-badge"></span>
+                    </div>
+                    <div class="project-description">
+                        <h3>Description</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div class="tech-stack">
+                        <h3>Technology Stack</h3>
+                        <div id="modalTech"></div>
+                    </div>
+                    <div class="timeline">
+                        <h3>Project Timeline</h3>
+                        <div id="modalTimeline"></div>
+                    </div>
+                    <div class="team-members">
+                        <h3>Team Members</h3>
+                        <div id="modalTeam"></div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Autonomads. All rights reserved.</p>
+            <div class="modal-footer">
+                <div id="modalActions"></div>
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
