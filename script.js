@@ -97,6 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function switchSection(sectionName) {
         console.log('Switching to section:', sectionName);
+        
+        // Handle home navigation - redirect to main site
+        if (sectionName === 'home') {
+            window.location.href = 'index.html';
+            return;
+        }
+        
         // Update navigation
         navItems.forEach(item => {
             item.classList.remove('active');
