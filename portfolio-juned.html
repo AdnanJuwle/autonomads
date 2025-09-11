@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Juned Jiya - Terminal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -18,6 +21,12 @@
                 <span class="control maximize"></span>
             </div>
             <div class="terminal-title">autonomads@terminal:~$</div>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <nav class="terminal-nav">
             <div class="nav-item">
@@ -46,6 +55,35 @@
             </div>
         </nav>
     </header>
+
+    <!-- Mobile Side Panel -->
+    <div class="mobile-side-panel" id="mobileSidePanel">
+        <div class="side-panel-header">
+            <div class="terminal-title">autonomads@terminal:~$</div>
+            <button class="close-panel-btn" id="closePanelBtn">&times;</button>
+        </div>
+        <nav class="side-panel-nav">
+            <div class="nav-item active" data-section="home">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./start.sh</span>
+            </div>
+            <div class="nav-item" data-section="team">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./team.sh</span>
+            </div>
+            <div class="nav-item" data-section="projects">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./projects.sh</span>
+            </div>
+            <div class="nav-item" data-section="about">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./about.sh</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- Portfolio Subheader -->
     <header class="portfolio-subheader">
@@ -389,6 +427,6 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.1"></script>
 </body>
 </html>
