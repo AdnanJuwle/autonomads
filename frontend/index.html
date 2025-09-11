@@ -4,29 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical AI Diagnosis</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Medical AI Diagnosis System</h1>
+        
+        <div class="info-section">
+            <h3>📋 Instructions</h3>
+            <p>Please fill out all fields accurately. The AI model will analyze your health data to assess risk levels for various diseases. All predictions are for educational purposes only.</p>
+            <div class="reference-guide">
+                <h4>📊 Reference Guide</h4>
+                <ul>
+                    <li><strong>BMI:</strong> Weight(kg) ÷ Height(m)²</li>
+                    <li><strong>Exercise:</strong> Regular physical activity (30+ minutes, 3+ times/week)</li>
+                    <li><strong>Check-up:</strong> Medical examination by healthcare professional</li>
+                    <li><strong>Servings:</strong> 1 serving = 1 cup (240ml) or 1 medium piece</li>
+                </ul>
+            </div>
+        </div>
+        
         <form id="prediction-form">
-            <label for="age">Age:</label>
-            <input type="number" id="age" required>
+            <label for="age">Age Category:</label>
+            <select id="age" required>
+                <option value="18-24">18-24</option>
+                <option value="25-29">25-29</option>
+                <option value="30-34">30-34</option>
+                <option value="35-39">35-39</option>
+                <option value="40-44">40-44</option>
+                <option value="45-49">45-49</option>
+                <option value="50-54">50-54</option>
+                <option value="55-59">55-59</option>
+                <option value="60-64">60-64</option>
+                <option value="65-69">65-69</option>
+                <option value="70-74">70-74</option>
+                <option value="75-79">75-79</option>
+                <option value="80+">80+</option>
+            </select>
             <label for="gender">Gender:</label>
             <select id="gender" required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
             <label for="height">Height (cm):</label>
-            <input type="number" id="height" required>
+            <input type="number" id="height" min="100" max="250" required>
+            <small class="help-text">Reference: Average adult height is 160-180 cm</small>
+            
             <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" required>
-            <label for="bmi">BMI:</label>
-            <input type="number" id="bmi" required>
-            <label for="exercise">Exercise (hours/week):</label>
-            <input type="number" id="exercise" required>
-            <label for="checkup">Check-up Frequency (per year):</label>
-            <input type="number" id="checkup" required>
+            <input type="number" id="weight" min="30" max="200" required>
+            <small class="help-text">Reference: Average adult weight is 60-80 kg</small>
+            
+            <label for="bmi">BMI (Body Mass Index):</label>
+            <input type="number" id="bmi" min="10" max="60" step="0.1" required>
+            <small class="help-text">Reference: Underweight &lt;18.5, Normal 18.5-24.9, Overweight 25-29.9, Obese ≥30</small>
+            <button type="button" id="calculate-bmi" class="bmi-calculator">📊 Calculate BMI</button>
+            <label for="exercise">Do you exercise regularly?</label>
+            <select id="exercise" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <label for="checkup">Last Check-up:</label>
+            <select id="checkup" required>
+                <option value="Within the past year">Within the past year</option>
+                <option value="Within the past 2 years">Within the past 2 years</option>
+                <option value="Within the past 5 years">Within the past 5 years</option>
+                <option value="5 or more years ago">5 or more years ago</option>
+                <option value="Never">Never</option>
+            </select>
             <label for="smoking_history">Smoking History:</label>
             <select id="smoking_history" required>
                 <option value="Yes">Yes</option>
@@ -38,11 +82,16 @@
                 <option value="No">No</option>
             </select>
             <label for="fruit_consumption">Fruit Consumption (daily):</label>
-            <input type="number" id="fruit_consumption" required>
+            <input type="number" id="fruit_consumption" min="0" max="30" step="0.5" required>
+            <small class="help-text">Reference: 0-2 servings = Low, 3-5 servings = Moderate, 6+ servings = High</small>
+            
             <label for="green_vegetables_consumption">Green Vegetables Consumption (daily):</label>
-            <input type="number" id="green_vegetables_consumption" required>
+            <input type="number" id="green_vegetables_consumption" min="0" max="30" step="0.5" required>
+            <small class="help-text">Reference: 0-1 servings = Low, 2-3 servings = Moderate, 4+ servings = High</small>
+            
             <label for="fried_food_consumption">Fried Food Consumption (weekly):</label>
-            <input type="number" id="fried_food_consumption" required>
+            <input type="number" id="fried_food_consumption" min="0" max="30" step="0.5" required>
+            <small class="help-text">Reference: 0-2 servings = Low, 3-5 servings = Moderate, 6+ servings = High</small>
             <button type="submit">Predict</button>
         </form>
 

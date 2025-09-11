@@ -1,53 +1,276 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
-  width: 50%;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 h1 {
   text-align: center;
+  margin: 0;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 2.2em;
+  font-weight: 300;
+}
+
+.info-section {
+  background-color: #f8f9fa;
+  padding: 25px;
+  margin: 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.info-section h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.info-section p {
+  color: #666;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
+.reference-guide {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+}
+
+.reference-guide h4 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.reference-guide ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.reference-guide li {
+  margin-bottom: 8px;
+  color: #666;
+  line-height: 1.5;
+}
+
 form {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
 }
 
 label {
-  margin: 10px 0 5px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.help-text {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  font-size: 0.85em;
+  color: #666;
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid #667eea;
 }
 
 input, select {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 button {
-  padding: 10px;
-  background-color: #4CAF50;
+  grid-column: 1 / -1;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.bmi-calculator {
+  grid-column: auto !important;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.bmi-calculator:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.bmi-result {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+  margin: 20px 0;
+  font-weight: 600;
+  text-align: center;
 }
 
 #prediction-result {
-  margin-top: 30px;
+  margin: 0;
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+
+.loading {
   text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #667eea;
+}
+
+.error {
+  background-color: #fee;
+  color: #c33;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #c33;
+  margin: 20px 0;
+}
+
+.results-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.diseases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.disease-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.disease-item.high-risk {
+  background-color: #fee;
+  border-left: 4px solid #e74c3c;
+  color: #c33;
+}
+
+.disease-item.low-risk {
+  background-color: #efe;
+  border-left: 4px solid #27ae60;
+  color: #2c5;
+}
+
+.disease-name {
+  font-size: 1.1em;
+}
+
+.risk-level {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    padding: 20px;
+  }
+  
+  .diseases-grid {
+    grid-template-columns: 1fr;
+  }
 }
