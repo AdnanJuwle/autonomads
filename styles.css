@@ -1092,7 +1092,7 @@ body {
 
 .bio-section {
     background: var(--terminal-surface);
-    padding: var(--space-xl);
+    padding: var(--space-lg) var(--space-xl) var(--space-xl) var(--space-xl);
     border-radius: 12px;
     border: 1px solid var(--terminal-border);
     position: relative;
