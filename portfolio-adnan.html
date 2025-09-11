@@ -3,247 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adnan Juwle - Portfolio</title>
+    <title>Adnan Juwle - Terminal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Autonomads</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
-            </ul>
+    <!-- Terminal Navigation -->
+    <nav class="terminal-nav">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">adnan@terminal:~$</div>
+        </div>
+        <div class="terminal-menu">
+            <div class="menu-item" data-section="home">
+                <span class="prompt">></span>
+                <span class="command">./home.sh</span>
+            </div>
+            <div class="menu-item active" data-section="profile">
+                <span class="prompt">></span>
+                <span class="command">./profile.sh</span>
+            </div>
+            <div class="menu-item" data-section="projects">
+                <span class="prompt">></span>
+                <span class="command">./projects.sh</span>
+            </div>
+            <div class="menu-item" data-section="skills">
+                <span class="prompt">></span>
+                <span class="command">./skills.sh</span>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <section class="portfolio-header">
-            <div class="container">
-                <div class="back-button-container">
-                    <a href="team.html" class="back-button">
-                        <i class="fas fa-arrow-left"></i> Back to Team
-                    </a>
+    <!-- Main Terminal Content -->
+    <main class="terminal-main">
+        <!-- Profile Section -->
+        <section id="profile" class="terminal-section active">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">adnan@terminal:~$</span>
+                    <span class="command">./profile.sh</span>
                 </div>
-                <div class="portfolio-profile">
-                    <div class="profile-image">
+                <div class="output-line">
+                    <span class="output">Loading profile data...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Initializing AI systems...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Profile loaded successfully</span>
+                </div>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
                         <img src="adnan.avif" alt="Adnan Juwle">
+                        <div class="status-indicator online"></div>
                     </div>
                     <div class="profile-info">
-                        <h1 class="portfolio-name">Adnan Juwle</h1>
-                        <p class="portfolio-role">AI Engineer & Machine Learning Developer</p>
-                        <p class="portfolio-bio">Passionate about leveraging artificial intelligence and machine learning to solve real-world problems. Specializing in robotics, computer vision, NLP, and autonomous systems development.</p>
-                        <div class="profile-skills">
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Computer Vision</span>
-                            <span class="skill-tag">Robotics</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">ROS</span>
+                        <h1 class="profile-name">Adnan Juwle</h1>
+                        <p class="profile-role">AI Engineer & Machine Learning Developer</p>
+                        <div class="profile-status">
+                            Status: <span class="status-text">Active</span> | 
+                            Location: <span class="status-text">Global Remote</span> | 
+                            Experience: <span class="status-text">3+ Years</span>
                         </div>
-                        <div class="profile-social">
-                            <a href="https://www.linkedin.com/in/adnan-juwle-b04816246/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/AdnanJuwle" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="mailto:adnanjuwle1@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <div class="bio-section">
+                        <h2>About</h2>
+                        <p>Passionate AI engineer specializing in machine learning, computer vision, and autonomous systems. I build intelligent solutions that solve real-world problems through cutting-edge technology and innovative thinking.</p>
+                        <p>Currently leading AI development for autonomous agricultural systems and exploring the intersection of robotics and artificial intelligence.</p>
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/AdnanJuwle" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/adnan-juwle-b04816246/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:adnanjuwle1@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio-content">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-section">
-                        <h2>Personal Projects</h2>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="AI Medical Diagnosis System">
-                                </div>
-                                <div class="project-content">
-                                    <h3>AI Medical Diagnosis System</h3>
-                                    <p>Machine learning system for medical diagnosis using various health parameters and symptoms. Built with comprehensive data preprocessing and multiple ML algorithms.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Machine Learning</span>
-                                        <span class="tech-tag">Scikit-learn</span>
-                                        <span class="tech-tag">Pandas</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/AI-Medical-Diagnosis-System" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Projects Section -->
+        <section id="projects" class="terminal-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">adnan@terminal:~$</span>
+                    <span class="command">./projects.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Scanning project repositories...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Found 7 personal projects</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Projects loaded</span>
+                </div>
+            </div>
 
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="VisionAid">
-                                </div>
-                                <div class="project-content">
-                                    <h3>VisionAid</h3>
-                                    <p>Computer vision application designed to assist visually impaired users with object detection, text recognition, and navigation assistance.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Computer Vision</span>
-                                        <span class="tech-tag">OpenCV</span>
-                                        <span class="tech-tag">TensorFlow</span>
-                                        <span class="tech-tag">Python</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/VisionAid" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="AI-Powered Smart Lecture Summarizer">
-                                </div>
-                                <div class="project-content">
-                                    <h3>AI-Powered Smart Lecture Summarizer</h3>
-                                    <p>Intelligent system that automatically summarizes lecture content using NLP techniques and provides key insights for students.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">NLP</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Transformers</span>
-                                        <span class="tech-tag">Summarization</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/AI-Powered-Smart-Lecture-Summarizer-1" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Kamil AI Assistant">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Kamil AI Assistant</h3>
-                                    <p>Offline AI brain using multiple LLMs to provide different functions. A comprehensive AI assistant with modular architecture and offline capabilities.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">LLM</span>
-                                        <span class="tech-tag">AI Assistant</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Offline AI</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/Kamil_v1" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> Version 1
-                                        </a>
-                                        <a href="https://github.com/AdnanJuwle/Kamil_v2" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> Version 2
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Player Tracking System">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Player Tracking System</h3>
-                                    <p>Computer vision system for tracking players in sports videos. Built as an internship recruitment task with real-time tracking capabilities.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Computer Vision</span>
-                                        <span class="tech-tag">Object Tracking</span>
-                                        <span class="tech-tag">OpenCV</span>
-                                        <span class="tech-tag">Python</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/player-tracking-system" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Trader Behaviour Analysis">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Trader Behaviour Analysis</h3>
-                                    <p>Data analysis project for understanding trader behavior patterns using machine learning and statistical analysis techniques.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Data Analysis</span>
-                                        <span class="tech-tag">Machine Learning</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Pandas</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/trader-behaviour-analysis" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Sentiment Analysis">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Sentiment Analysis</h3>
-                                    <p>Quick sentiment analysis project completed in a day. Analyzes text sentiment using natural language processing techniques.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">NLP</span>
-                                        <span class="tech-tag">Sentiment Analysis</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">TextBlob</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/AdnanJuwle/Sentiment-Analysis" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="medical-ai">
+                    <div class="project-header">
+                        <div class="project-icon">🏥</div>
+                        <div class="project-info">
+                            <h3 class="project-name">AI Medical Diagnosis System</h3>
+                            <p class="project-status">Status: <span class="status-badge completed">Completed</span></p>
                         </div>
                     </div>
+                    <div class="project-content">
+                        <p class="project-description">Machine learning system for medical diagnosis using various health parameters and symptoms. Built with comprehensive data preprocessing and multiple ML algorithms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/AI-Medical-Diagnosis-System" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="vision-aid">
+                    <div class="project-header">
+                        <div class="project-icon">👁️</div>
+                        <div class="project-info">
+                            <h3 class="project-name">VisionAid</h3>
+                            <p class="project-status">Status: <span class="status-badge development">In Development</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Computer vision application designed to assist visually impaired users with object detection, text recognition, and navigation assistance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/VisionAid" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="lecture-summarizer">
+                    <div class="project-header">
+                        <div class="project-icon">📚</div>
+                        <div class="project-info">
+                            <h3 class="project-name">AI Lecture Summarizer</h3>
+                            <p class="project-status">Status: <span class="status-badge completed">Completed</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Intelligent system that automatically summarizes lecture content using NLP techniques and provides key insights for students.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">Summarization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/AI-Powered-Smart-Lecture-Summarizer-1" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="kamil-ai">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Kamil AI Assistant</h3>
+                            <p class="project-status">Status: <span class="status-badge paused">Paused</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Offline AI brain using multiple LLMs to provide different functions. A comprehensive AI assistant with modular architecture and offline capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">AI Assistant</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Offline AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/Kamil_v1" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Version 1
+                            </a>
+                            <a href="https://github.com/AdnanJuwle/Kamil_v2" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Version 2
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="player-tracking">
+                    <div class="project-header">
+                        <div class="project-icon">⚽</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Player Tracking System</h3>
+                            <p class="project-status">Status: <span class="status-badge completed">Completed</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Computer vision system for tracking players in sports videos. Built as an internship recruitment task with real-time tracking capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Object Tracking</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/player-tracking-system" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="trader-analysis">
+                    <div class="project-header">
+                        <div class="project-icon">📈</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Trader Behaviour Analysis</h3>
+                            <p class="project-status">Status: <span class="status-badge completed">Completed</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Data analysis project for understanding trader behavior patterns using machine learning and statistical analysis techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/trader-behaviour-analysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="sentiment-analysis">
+                    <div class="project-header">
+                        <div class="project-icon">💭</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Sentiment Analysis</h3>
+                            <p class="project-status">Status: <span class="status-badge completed">Completed</span></p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Quick sentiment analysis project completed in a day. Analyzes text sentiment using natural language processing techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Sentiment Analysis</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TextBlob</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AdnanJuwle/Sentiment-Analysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="terminal-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">adnan@terminal:~$</span>
+                    <span class="command">./skills.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Loading skill matrix...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Skills loaded</span>
+                </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Machine Learning</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">PyTorch</span>
+                            <span class="skill-item">Scikit-learn</span>
+                            <span class="skill-item">Keras</span>
+                            <span class="skill-item">Pandas</span>
+                            <span class="skill-item">NumPy</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Computer Vision</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">OpenCV</span>
+                            <span class="skill-item">YOLO</span>
+                            <span class="skill-item">Object Detection</span>
+                            <span class="skill-item">Image Processing</span>
+                            <span class="skill-item">Feature Extraction</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Robotics & IoT</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">ROS</span>
+                            <span class="skill-item">Arduino</span>
+                            <span class="skill-item">Raspberry Pi</span>
+                            <span class="skill-item">Sensor Integration</span>
+                            <span class="skill-item">Autonomous Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Programming</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>NLP & AI</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Transformers</span>
+                            <span class="skill-item">BERT</span>
+                            <span class="skill-item">Text Processing</span>
+                            <span class="skill-item">Sentiment Analysis</span>
+                            <span class="skill-item">LLMs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data Science</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Data Analysis</span>
+                            <span class="skill-item">Visualization</span>
+                            <span class="skill-item">Statistics</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">Jupyter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Section (Back to Team) -->
+        <section id="home" class="terminal-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">adnan@terminal:~$</span>
+                    <span class="command">./home.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Redirecting to team page...</span>
+                </div>
+            </div>
+
+            <div class="redirect-container">
+                <div class="redirect-message">
+                    <h2>Returning to Team</h2>
+                    <p>You will be redirected to the Autonomads team page.</p>
+                    <a href="index.html" class="redirect-btn">
+                        <span class="btn-icon">></span>
+                        <span class="btn-text">Go to Team</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Autonomads</h3>
-                    <p>Building autonomous systems for a smarter future.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> adnanjuwle1@gmail.com</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/adnan-juwle-b04816246/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AdnanJuwle" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Autonomads. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
