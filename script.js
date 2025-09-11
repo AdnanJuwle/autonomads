@@ -96,12 +96,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function switchSection(sectionName) {
+        console.log('Switching to section:', sectionName);
         // Update navigation
         navItems.forEach(item => {
             item.classList.remove('active');
         });
         const activeNavItem = document.querySelector(`[data-section="${sectionName}"]`);
-        if (activeNavItem) activeNavItem.classList.add('active');
+        if (activeNavItem) {
+            activeNavItem.classList.add('active');
+            console.log('Found and activated nav item:', activeNavItem);
+        } else {
+            console.log('No nav item found for section:', sectionName);
+        }
         
         // Update side panel navigation
         sidePanelNavItems.forEach(item => {
@@ -115,7 +121,12 @@ document.addEventListener('DOMContentLoaded', function() {
             section.classList.remove('active');
         });
         const activeSection = document.getElementById(sectionName);
-        if (activeSection) activeSection.classList.add('active');
+        if (activeSection) {
+            activeSection.classList.add('active');
+            console.log('Found and activated content section:', activeSection);
+        } else {
+            console.log('No content section found for:', sectionName);
+        }
         
         // Update URL hash
         window.location.hash = sectionName;
