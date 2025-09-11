@@ -2106,4 +2106,68 @@ body {
         padding: var(--space-sm) var(--space-md);
         font-size: 0.8rem;
     }
+    
+    /* Personal Portfolio Mobile Fixes */
+    .profile-container {
+        margin-top: var(--space-lg); /* Reduced top margin */
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
+    }
+    
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-content {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .bio-section {
+        padding: var(--space-lg);
+    }
+    
+    .bio-section p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: var(--space-md);
+    }
+    
+    .social-section .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-md);
+    }
+    
+    .social-section .social-link {
+        min-width: 120px; /* Increased width */
+        padding: var(--space-md) var(--space-lg);
+        font-size: 0.9rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .skill-category {
+        padding: var(--space-lg);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .skill-item {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.85rem;
+    }
 }
