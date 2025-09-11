@@ -232,6 +232,7 @@
                             <a href="https://github.com/AdnanJuwle/AI-Medical-Diagnosis-System" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> View Code
                             </a>
+                            <button class="project-details-btn" data-project="medical-ai">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -258,6 +259,7 @@
                             <a href="https://github.com/AdnanJuwle/VisionAid" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> View Code
                             </a>
+                            <button class="project-details-btn" data-project="vision-aid">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -284,6 +286,7 @@
                             <a href="https://github.com/AdnanJuwle/AI-Powered-Smart-Lecture-Summarizer-1" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> View Code
                             </a>
+                            <button class="project-details-btn" data-project="lecture-summarizer">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -313,6 +316,7 @@
                             <a href="https://github.com/AdnanJuwle/Kamil_v2" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> Version 2
                             </a>
+                            <button class="project-details-btn" data-project="kamil-ai">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -339,6 +343,7 @@
                             <a href="https://github.com/AdnanJuwle/player-tracking-system" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> View Code
                             </a>
+                            <button class="project-details-btn" data-project="player-tracking">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -365,6 +370,7 @@
                             <a href="https://github.com/AdnanJuwle/trader-behaviour-analysis" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> View Code
                             </a>
+                            <button class="project-details-btn" data-project="trader-analysis">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -391,6 +397,7 @@
                             <a href="https://github.com/AdnanJuwle/Sentiment-Analysis" class="project-link" target="_blank">
                                 <i class="fab fa-github"></i> View Code
                             </a>
+                            <button class="project-details-btn" data-project="sentiment-analysis">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -508,6 +515,42 @@
             </div>
         </section>
     </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-description">
+                        <h3>Description</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div class="tech-stack">
+                        <h3>Tech Stack</h3>
+                        <div id="modalTech"></div>
+                    </div>
+                    <div class="timeline">
+                        <h3>Timeline</h3>
+                        <div id="modalTimeline"></div>
+                    </div>
+                    <div class="team-members">
+                        <h3>Team</h3>
+                        <div id="modalTeam"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="modalActions"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js?v=1.1"></script>
 </body>

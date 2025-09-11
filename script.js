@@ -296,6 +296,126 @@ document.addEventListener('DOMContentLoaded', function() {
                 { text: 'View GitHub', url: '#', icon: 'fab fa-github', primary: true },
                 { text: 'Energy Analysis', url: '#', icon: 'fas fa-bolt', primary: false }
             ]
+        },
+        // Personal Projects Data
+        'medical-ai': {
+            title: 'AI Medical Diagnosis System',
+            image: 'medical-ai.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Machine learning system for medical diagnosis using various health parameters and symptoms. Built with comprehensive data preprocessing and multiple ML algorithms for accurate preliminary diagnoses.',
+            techStack: ['Python', 'Machine Learning', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+            timeline: [
+                { phase: 'Data Collection & Preprocessing', duration: 'January 2025', description: 'Gathered and cleaned medical datasets' },
+                { phase: 'Model Development', duration: 'January 2025', description: 'Developed multiple ML algorithms for diagnosis' },
+                { phase: 'Testing & Validation', duration: 'January 2025', description: 'Validated model accuracy and performance' },
+                { phase: 'Deployment', duration: 'January 22, 2025', description: 'Final deployment and documentation' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/AI-Medical-Diagnosis-System', icon: 'fab fa-github', primary: true }
+            ]
+        },
+        'vision-aid': {
+            title: 'VisionAid - Computer Vision Assistant',
+            image: 'vision-aid.jpg',
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'Computer vision application designed to assist visually impaired users by providing real-time object detection, text recognition, and navigation assistance.',
+            techStack: ['Python', 'Computer Vision', 'OpenCV', 'TensorFlow', 'TTS', 'Speech Recognition'],
+            timeline: [
+                { phase: 'Planning & Design', duration: 'November 2024', description: 'Initial planning and system design' },
+                { phase: 'Core Development', duration: 'November 2024 - Present', description: 'Developing core computer vision features' },
+                { phase: 'Testing & Optimization', duration: 'September 2025', description: 'User testing and performance optimization' },
+                { phase: 'Release', duration: 'September 2025', description: 'Final release and deployment' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/VisionAid', icon: 'fab fa-github', primary: true }
+            ]
+        },
+        'lecture-summarizer': {
+            title: 'AI-Powered Smart Lecture Summarizer',
+            image: 'lecture-summarizer.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Mini project for third year coursework that automatically summarizes lecture content using transformer-based models for efficient note-taking.',
+            techStack: ['Python', 'Transformers', 'Hugging Face', 'NLP', 'Summarization'],
+            timeline: [
+                { phase: 'Development', duration: '2 days', description: 'Rapid development of summarization system' },
+                { phase: 'Testing', duration: '1 day', description: 'Testing and validation' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/AI-Powered-Smart-Lecture-Summarizer-1', icon: 'fab fa-github', primary: true }
+            ]
+        },
+        'kamil-ai': {
+            title: 'Kamil AI Assistant',
+            image: 'kamil-ai.jpg',
+            status: 'Paused',
+            statusClass: 'paused',
+            description: 'Built-in offline AI brain using multiple LLMs to provide different functions. A comprehensive AI assistant designed to work without internet connectivity.',
+            techStack: ['Python', 'LLMs', 'Offline AI', 'Local Processing', 'Multiple Models'],
+            timeline: [
+                { phase: 'Planning', duration: 'April 2025', description: 'Initial planning and architecture design' },
+                { phase: 'Version 1 Development', duration: 'June 1-20, 2025', description: 'First version development' },
+                { phase: 'Version 2 Development', duration: 'June 2025', description: 'Improved second version' },
+                { phase: 'Paused', duration: 'June 20, 2025 - Present', description: 'Project currently paused' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View v1 GitHub', url: 'https://github.com/AdnanJuwle/Kamil_v1', icon: 'fab fa-github', primary: true },
+                { text: 'View v2 GitHub', url: 'https://github.com/AdnanJuwle/Kamil_v2', icon: 'fab fa-github', primary: false }
+            ]
+        },
+        'player-tracking': {
+            title: 'Player Tracking System',
+            image: 'player-tracking.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Computer vision system for tracking players in sports videos. Developed as an internship recruitment task with real-time object detection and tracking capabilities.',
+            techStack: ['Python', 'Computer Vision', 'Object Tracking', 'OpenCV', 'YOLO'],
+            timeline: [
+                { phase: 'Development', duration: '3 days', description: 'Rapid development of tracking system' },
+                { phase: 'Testing', duration: '1 day', description: 'Testing and validation' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/player-tracking-system', icon: 'fab fa-github', primary: true }
+            ]
+        },
+        'trader-analysis': {
+            title: 'Trader Behaviour Analysis',
+            image: 'trader-analysis.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Machine learning system for analyzing trader behavior patterns in financial markets. Built for understanding market dynamics and trading patterns.',
+            techStack: ['Python', 'Machine Learning', 'Pandas', 'NumPy', 'Financial Analysis'],
+            timeline: [
+                { phase: 'Development', duration: '3-4 days', description: 'Development of analysis system' },
+                { phase: 'Testing', duration: '1 day', description: 'Testing and validation' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/trader-behaviour-analysis', icon: 'fab fa-github', primary: true }
+            ]
+        },
+        'sentiment-analysis': {
+            title: 'Sentiment Analysis Tool',
+            image: 'sentiment-analysis.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Simple sentiment analysis tool for analyzing text data. Built as a quick side project to understand natural language processing basics.',
+            techStack: ['Python', 'Sentiment Analysis', 'TextBlob', 'NLP'],
+            timeline: [
+                { phase: 'Development', duration: '1 day', description: 'Quick development of sentiment analysis tool' },
+                { phase: 'Testing', duration: 'Few hours', description: 'Basic testing and validation' }
+            ],
+            team: ['Adnan Juwle (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/Sentiment-Analysis', icon: 'fab fa-github', primary: true }
+            ]
         }
     };
     
