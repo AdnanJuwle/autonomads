@@ -3,181 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddhant Khobaragade - Portfolio</title>
+    <title>Siddhant Khobaragade - Terminal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Autonomads</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
-            </ul>
+    <!-- Terminal Header -->
+    <header class="terminal-header">
+        <div class="terminal-bar">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">siddhant@portfolio:~$</div>
         </div>
-    </nav>
+        <nav class="terminal-nav">
+            <div class="nav-item" data-section="home">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./home.sh</span>
+            </div>
+            <div class="nav-item active" data-section="profile">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./profile.sh</span>
+            </div>
+            <div class="nav-item" data-section="projects">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./projects.sh</span>
+            </div>
+            <div class="nav-item" data-section="skills">
+                <span class="nav-prompt">></span>
+                <span class="nav-command">./skills.sh</span>
+            </div>
+        </nav>
+    </header>
 
-    <main>
-        <section class="portfolio-header">
-            <div class="container">
-                <div class="back-button-container">
-                    <a href="team.html" class="back-button">
-                        <i class="fas fa-arrow-left"></i> Back to Team
-                    </a>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Profile Section -->
+        <section id="profile" class="content-section active">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">siddhant@portfolio:~$</span>
+                    <span class="command">./profile.sh</span>
                 </div>
-                <div class="portfolio-profile">
-                    <div class="profile-image">
+                <div class="output-line">
+                    <span class="output">Loading profile data...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Initializing software systems...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Profile loaded successfully</span>
+                </div>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
                         <img src="siddhant.jpg" alt="Siddhant Khobaragade">
+                        <div class="status-indicator online"></div>
                     </div>
                     <div class="profile-info">
-                        <h1 class="portfolio-name">Siddhant Khobaragade</h1>
-                        <p class="portfolio-role">Software Engineer & Developer</p>
-                        <p class="portfolio-bio">Full-stack developer with expertise in web technologies, mobile development, and software architecture. Ensures seamless integration of all system components.</p>
-                        <div class="profile-skills">
-                            <span class="skill-tag">Full-Stack Development</span>
-                            <span class="skill-tag">Mobile Development</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Database Design</span>
-                            <span class="skill-tag">API Development</span>
+                        <h1 class="profile-name">Siddhant Khobaragade</h1>
+                        <p class="profile-role">Software Engineer & System Integrator</p>
+                        <div class="profile-status">
+                            Status: <span class="status-text">Active</span> | 
+                            Location: <span class="status-text">Global Remote</span> | 
+                            Experience: <span class="status-text">2+ Years</span>
                         </div>
-                        <div class="profile-social">
-                            <a href="https://www.linkedin.com/in/sidvid/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/sid-vid" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="mailto:siddhant.ak04@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <div class="bio-section">
+                        <h2>About</h2>
+                        <p>Dedicated software engineer specializing in system integration, backend development, and software architecture. I build scalable, efficient software solutions that seamlessly connect hardware and software systems.</p>
+                        <p>Currently leading software integration for autonomous systems and developing robust backend infrastructure for IoT applications.</p>
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Software Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/sid-vid" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sidvid/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:siddhant.ak04@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio-content">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-section">
-                        <h2>Personal Projects</h2>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Web Development Projects">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Web Development Portfolio</h3>
-                                    <p>Comprehensive web development projects showcasing full-stack capabilities including frontend interfaces, backend APIs, and database integration.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">React</span>
-                                        <span class="tech-tag">Node.js</span>
-                                        <span class="tech-tag">MongoDB</span>
-                                        <span class="tech-tag">Express</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/sid-vid" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Projects
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">siddhant@portfolio:~$</span>
+                    <span class="command">./projects.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Scanning software repositories...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Found 5 software projects</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Projects loaded</span>
+                </div>
+            </div>
 
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Mobile App Development">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Mobile App Development</h3>
-                                    <p>Cross-platform mobile applications built with modern frameworks, featuring responsive design and seamless user experience across different devices.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">React Native</span>
-                                        <span class="tech-tag">Flutter</span>
-                                        <span class="tech-tag">Mobile UI/UX</span>
-                                        <span class="tech-tag">API Integration</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/sid-vid" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Apps
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="Database Design">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Database Design & Management</h3>
-                                    <p>Efficient database design and management systems with optimized queries, data modeling, and performance tuning for scalable applications.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">SQL</span>
-                                        <span class="tech-tag">MongoDB</span>
-                                        <span class="tech-tag">Database Design</span>
-                                        <span class="tech-tag">Performance Optimization</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/sid-vid" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View Designs
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="automata.jpg" alt="API Development">
-                                </div>
-                                <div class="project-content">
-                                    <h3>RESTful API Development</h3>
-                                    <p>Robust RESTful APIs with proper authentication, error handling, and documentation. Built for scalable web applications and mobile backends.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">REST APIs</span>
-                                        <span class="tech-tag">Authentication</span>
-                                        <span class="tech-tag">Express.js</span>
-                                        <span class="tech-tag">JWT</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/sid-vid" class="project-link" target="_blank">
-                                            <i class="fab fa-github"></i> View APIs
-                                        </a>
-                                    </div>
-                                </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="system-integration">
+                    <div class="project-header">
+                        <div class="project-icon">🔗</div>
+                        <div class="project-info">
+                            <h3 class="project-name">System Integration</h3>
+                            <div class="project-status">
+                                <span class="status-badge development">In Development</span>
                             </div>
                         </div>
                     </div>
+                    <div class="project-content">
+                        <p class="project-description">Comprehensive system integration for Prana and Automata rovers. Includes software-hardware communication, data processing pipelines, and real-time monitoring systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">API Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="backend-infrastructure">
+                    <div class="project-header">
+                        <div class="project-icon">⚙️</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Backend Infrastructure</h3>
+                            <div class="project-status">
+                                <span class="status-badge development">In Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Robust backend infrastructure for IoT applications. Features scalable data processing, real-time analytics, and secure communication protocols for autonomous systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-server"></i> Infrastructure
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="data-processing">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Data Processing Pipeline</h3>
+                            <div class="project-status">
+                                <span class="status-badge development">In Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Advanced data processing pipeline for agricultural and environmental data. Includes real-time data ingestion, processing, and visualization for decision-making systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Apache Kafka</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Data Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-chart-bar"></i> Analytics
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="api-development">
+                    <div class="project-header">
+                        <div class="project-icon">🌐</div>
+                        <div class="project-info">
+                            <h3 class="project-name">RESTful API Development</h3>
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Comprehensive RESTful API development for IoT device communication. Features authentication, rate limiting, and real-time data streaming capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">API Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-code"></i> API Docs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="monitoring-system">
+                    <div class="project-header">
+                        <div class="project-icon">📈</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Real-time Monitoring System</h3>
+                            <div class="project-status">
+                                <span class="status-badge development">In Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Real-time monitoring and alerting system for autonomous devices. Features dashboard visualization, performance metrics, and automated alerting for system health.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Monitoring</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">siddhant@portfolio:~$</span>
+                    <span class="command">./skills.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Loading skill matrix...</span>
+                </div>
+                <div class="output-line">
+                    <span class="output success">✓ Skills loaded</span>
+                </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Express.js</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Django</span>
+                            <span class="skill-item">FastAPI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Database & Storage</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">SQLite</span>
+                            <span class="skill-item">Data Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>System Integration</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">ROS</span>
+                            <span class="skill-item">IoT Protocols</span>
+                            <span class="skill-item">API Integration</span>
+                            <span class="skill-item">Microservices</span>
+                            <span class="skill-item">Message Queues</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>DevOps & Deployment</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Kubernetes</span>
+                            <span class="skill-item">CI/CD</span>
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Linux</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data Processing</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Apache Kafka</span>
+                            <span class="skill-item">Pandas</span>
+                            <span class="skill-item">NumPy</span>
+                            <span class="skill-item">Data Visualization</span>
+                            <span class="skill-item">ETL Pipelines</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frontend & UI</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">React</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">HTML/CSS</span>
+                            <span class="skill-item">Chart.js</span>
+                            <span class="skill-item">WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Section (Back to Team) -->
+        <section id="home" class="content-section">
+            <div class="terminal-output">
+                <div class="output-line">
+                    <span class="prompt">siddhant@portfolio:~$</span>
+                    <span class="command">./home.sh</span>
+                </div>
+                <div class="output-line">
+                    <span class="output">Redirecting to team page...</span>
+                </div>
+            </div>
+
+            <div class="redirect-container">
+                <div class="redirect-message">
+                    <h2>Returning to Team</h2>
+                    <p>You will be redirected to the Autonomads team page.</p>
+                    <a href="index.html" class="redirect-btn">
+                        <span class="btn-icon">></span>
+                        <span class="btn-text">Go to Team</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Autonomads</h3>
-                    <p>Building autonomous systems for a smarter future.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> adnanjuwle1@gmail.com</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/adnan-juwle-b04816246/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AdnanJuwle" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Autonomads. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

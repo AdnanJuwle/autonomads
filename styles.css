@@ -1052,8 +1052,8 @@ body {
 }
 
 .profile-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-3xl);
 }
 
@@ -1161,6 +1161,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    min-width: 200px;
 }
 
 .social-section .social-link::before {
