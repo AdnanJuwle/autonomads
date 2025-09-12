@@ -59,12 +59,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     }
     
-    // Handle hash navigation on page load
+    // Handle hash navigation on page load with improved positioning
     function handleHashNavigation() {
         const hash = window.location.hash.substring(1);
         if (hash && document.getElementById(hash)) {
-            // Always switch to the hash section, regardless of current state
+            // Prevent flashy jumps by hiding content initially
+            document.body.style.visibility = 'hidden';
+            
+            // Switch to the hash section
             switchSection(hash);
+            
+            // Wait for content to load, then show and scroll smoothly
+            setTimeout(() => {
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    // Account for fixed header height
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                    const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Show content after positioning
+                document.body.style.visibility = 'visible';
+            }, 100);
         }
     }
     
@@ -591,27 +612,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     addBlinkingCursor();
     
-    // Add random terminal output effects (subtle)
-    setInterval(() => {
-        const outputs = document.querySelectorAll('.terminal-output');
-        outputs.forEach(output => {
-            if (Math.random() < 0.05) { // 5% chance - much less frequent
-                const randomLine = document.createElement('div');
-                randomLine.className = 'output-line';
-                randomLine.innerHTML = `
-                    <span class="output">System check: ${Math.random() > 0.5 ? 'OK' : 'Warning'}</span>
-                `;
-                output.appendChild(randomLine);
-                
-                // Remove after 3 seconds
-                setTimeout(() => {
-                    if (randomLine.parentNode) {
-                        randomLine.parentNode.removeChild(randomLine);
-                    }
-                }, 3000);
-            }
-        });
-    }, 5000); // Less frequent updates
+    // Debounced terminal effects - only when section is active
+    const debouncedTerminalEffect = debounce(() => {
+        const activeOutput = document.querySelector('.content-section.active .terminal-output');
+        if (activeOutput && Math.random() < 0.3) { // Only 30% chance, only on active section
+            const randomLine = document.createElement('div');
+            randomLine.className = 'output-line';
+            randomLine.innerHTML = `
+                <span class="output">System check: ${Math.random() > 0.5 ? 'OK' : 'Warning'}</span>
+            `;
+            activeOutput.appendChild(randomLine);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                if (randomLine.parentNode) {
+                    randomLine.parentNode.removeChild(randomLine);
+                }
+            }, 3000);
+        }
+    }, 2000); // Debounced to 2 seconds
+    
+    // Less frequent terminal effects
+    setInterval(debouncedTerminalEffect, 8000); // Much less frequent updates
     
     // Performance optimization: Lazy loading for images
     function initializeLazyLoading() {
@@ -644,6 +666,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initialize lazy loading
+    // Debounce function for performance
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Preload critical images
+    function preloadCriticalImages() {
+        const criticalImages = [
+            'adnan.avif',
+            'juned.jpg', 
+            'siddhant.jpg',
+            'automata.jpg',
+            'batman.webp',
+            'batpod.jpg',
+            'droneswarm.jpg'
+        ];
+        
+        criticalImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+    
+    // Initialize lazy loading and preload critical images
     initializeLazyLoading();
+    preloadCriticalImages();
 });
