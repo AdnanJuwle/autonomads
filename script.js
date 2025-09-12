@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { phase: 'Suit Integration', duration: 'November 2025 - December 2025', description: 'Integration of sensors, communication systems, and smart materials' },
                 { phase: 'Tech Integration', duration: 'December 2025', description: 'Final integration of all technological components' }
             ],
-            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)', 'Siddhant Khobaragade (Software Integration)'],
+            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
             actions: [
                 { text: 'View GitHub', url: '#', icon: 'fab fa-github', primary: true },
                 { text: 'Design Gallery', url: '#', icon: 'fas fa-images', primary: false }
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { phase: 'Development Phase', duration: 'March 2026 - June 2026', description: 'Hardware development and autonomous system integration' },
                 { phase: 'Testing Phase', duration: 'July 2026 - August 2026', description: 'Safety testing and performance optimization' }
             ],
-            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)', 'Siddhant Khobaragade (Software Integration)'],
+            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
             actions: [
                 { text: 'View GitHub', url: '#', icon: 'fab fa-github', primary: true },
                 { text: 'Safety Documentation', url: '#', icon: 'fas fa-shield-alt', primary: false }
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { phase: 'Prototype Development', duration: 'TBD', description: 'Hardware prototype and software development' },
                 { phase: 'Testing Phase', duration: 'TBD', description: 'Field testing and performance evaluation' }
             ],
-            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)', 'Siddhant Khobaragade (Software Integration)'],
+            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
             actions: [
                 { text: 'View GitHub', url: '#', icon: 'fab fa-github', primary: true },
                 { text: 'Energy Analysis', url: '#', icon: 'fas fa-bolt', primary: false }
