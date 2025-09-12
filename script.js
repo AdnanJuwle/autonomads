@@ -5,9 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const contentSections = document.querySelectorAll('.content-section');
     const sidePanelNavItems = document.querySelectorAll('.side-panel-nav .nav-item');
     
-    // Simple navigation function
+    // Enhanced navigation function with smooth transitions
     function switchSection(sectionName) {
         console.log('Switching to section:', sectionName);
+        
+        // Add transition class for smooth animation
+        document.body.classList.add('transitioning');
         
         // Update navigation
         navItems.forEach(item => {
@@ -25,20 +28,35 @@ document.addEventListener('DOMContentLoaded', function() {
         const activeSideNavItem = document.querySelector(`.side-panel-nav [data-section="${sectionName}"]`);
         if (activeSideNavItem) activeSideNavItem.classList.add('active');
         
-        // Update content sections
+        // Update content sections with smooth transition
         contentSections.forEach(section => {
             section.classList.remove('active');
         });
-        const activeSection = document.getElementById(sectionName);
-        if (activeSection) {
-            activeSection.classList.add('active');
-        }
+        
+        // Use setTimeout for smooth transition
+        setTimeout(() => {
+            const activeSection = document.getElementById(sectionName);
+            if (activeSection) {
+                activeSection.classList.add('active');
+                // Smooth scroll to section
+                activeSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }
+            
+            // Remove transition class
+            document.body.classList.remove('transitioning');
+        }, 150);
         
         // Update URL hash
         window.location.hash = sectionName;
         
-        // Add terminal output for new section
+    // Add terminal output for new section (throttled for performance)
+    requestAnimationFrame(() => {
         addTerminalOutput(sectionName);
+    });
     }
     
     // Handle hash navigation on page load
@@ -594,4 +612,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, 5000); // Less frequent updates
+    
+    // Performance optimization: Lazy loading for images
+    function initializeLazyLoading() {
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    }
+    
+    // Throttle function for performance
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    }
+    
+    // Initialize lazy loading
+    initializeLazyLoading();
 });
