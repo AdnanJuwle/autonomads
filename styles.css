@@ -1744,6 +1744,8 @@ body {
     /* Show mobile elements on mobile */
     .mobile-menu-btn {
         display: flex !important;
+        position: relative;
+        align-items: center;
     }
     
     .mobile-side-panel {
@@ -1756,10 +1758,11 @@ body {
     
     /* Mobile Menu Button */
     .mobile-menu-btn {
+        display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 30px;
+        justify-content: space-between;
+        width: 28px;
+        height: 22px;
         background: transparent;
         border: none;
         cursor: pointer;
@@ -1768,12 +1771,13 @@ body {
     }
     
     .mobile-menu-btn span {
-        width: 25px;
+        display: block;
+        width: 100%;
         height: 3px;
-        background: var(--terminal-text);
-        border-radius: 3px;
+        background: var(--terminal-accent); /* Green like terminal theme */
+        border-radius: 2px;
         transition: all 0.3s ease;
-        transform-origin: 1px;
+        transform-origin: center;
     }
     
     .mobile-menu-btn.active span:first-child {
@@ -1904,8 +1908,12 @@ body {
     }
     
     .terminal-bar {
-        padding: var(--space-xs) var(--space-sm);
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px; /* Add breathing room */
+        background-color: var(--terminal-bg);
+        border-bottom: 1px solid var(--terminal-border);
     }
     
     .terminal-controls {
