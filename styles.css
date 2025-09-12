@@ -1755,10 +1755,11 @@ body {
     .mobile-menu-btn {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center; /* center hamburger bars */
+        justify-content: center;   /* instead of space-between */
+        align-items: center;       /* center bars horizontally */
+        gap: 5px;                  /* consistent spacing between bars */
         width: 28px;
-        height: 22px;
+        height: 28px;              /* slightly taller box so bars are centered */
         background: transparent;
         border: none;
         cursor: pointer;
@@ -1768,9 +1769,9 @@ body {
     
     .mobile-menu-btn span {
         display: block;
-        width: 100%;
+        width: 24px;   /* slightly smaller than container */
         height: 3px;
-        background: var(--terminal-accent); /* neon green like terminal */
+        background: var(--terminal-accent);
         border-radius: 2px;
         transition: all 0.3s ease;
         transform-origin: center;
@@ -1907,11 +1908,12 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 20px; /* consistent spacing */
+        padding: 8px 16px; /* reduced padding for tighter look */
         background-color: var(--terminal-bg);
         border-bottom: 1px solid var(--terminal-border);
+        height: 48px; /* consistent header height */
         position: relative;
-        z-index: 1000; /* keep above body content */
+        z-index: 1000;
     }
     
     .terminal-controls {
