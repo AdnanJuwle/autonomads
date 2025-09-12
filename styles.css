@@ -1771,7 +1771,7 @@ body {
         display: block;
         width: 24px;   /* slightly smaller than container */
         height: 3px;
-        background: var(--terminal-accent);
+        background: var(--terminal-accent); /* green terminal color */
         border-radius: 2px;
         transition: all 0.3s ease;
         transform-origin: center;
@@ -1835,9 +1835,17 @@ body {
         padding: 0;
         width: 30px;
         height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1002; /* Ensure it's above other elements */
+        position: relative;
+    }
+    
+    .close-panel-btn:hover {
+        color: var(--terminal-accent);
+        background: var(--terminal-surface);
+        border-radius: 4px;
     }
     
     .side-panel-nav {
