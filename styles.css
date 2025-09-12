@@ -1815,13 +1815,13 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: calc(var(--space-lg) / 2);
+        padding: calc(var(--space-sm) / 2);
         border-bottom: 1px solid var(--terminal-border);
         background: var(--terminal-surface);
     }
     
     .side-panel-header .terminal-title {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         color: var(--terminal-text);
     }
     
@@ -1840,21 +1840,21 @@ body {
     }
     
     .side-panel-nav {
-        padding: calc(var(--space-lg) / 2);
+        padding: calc(var(--space-sm) / 2);
     }
     
     .side-panel-nav .nav-item {
         display: flex;
         align-items: center;
-        gap: var(--space-md);
-        padding: calc(var(--space-lg) / 2);
-        margin-bottom: calc(var(--space-sm) / 2);
+        gap: calc(var(--space-sm) / 2);
+        padding: calc(var(--space-sm) / 2) calc(var(--space-md) / 2);
+        margin-bottom: calc(var(--space-xs) / 2);
         background: var(--terminal-surface);
         border: 1px solid var(--terminal-border);
-        border-radius: 8px;
+        border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s ease;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .side-panel-nav .nav-item:hover {
