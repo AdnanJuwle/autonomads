@@ -1815,7 +1815,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: var(--space-lg);
+        padding: calc(var(--space-lg) / 2);
         border-bottom: 1px solid var(--terminal-border);
         background: var(--terminal-surface);
     }
@@ -1840,15 +1840,15 @@ body {
     }
     
     .side-panel-nav {
-        padding: var(--space-lg);
+        padding: calc(var(--space-lg) / 2);
     }
     
     .side-panel-nav .nav-item {
         display: flex;
         align-items: center;
         gap: var(--space-md);
-        padding: var(--space-lg);
-        margin-bottom: var(--space-sm);
+        padding: calc(var(--space-lg) / 2);
+        margin-bottom: calc(var(--space-sm) / 2);
         background: var(--terminal-surface);
         border: 1px solid var(--terminal-border);
         border-radius: 8px;
@@ -1904,7 +1904,7 @@ body {
     }
     
     .terminal-bar {
-        padding: var(--space-xs) var(--space-sm);
+        padding: calc(var(--space-xs) / 2) calc(var(--space-sm) / 2);
         justify-content: space-between;
     }
     
@@ -1913,7 +1913,7 @@ body {
     }
     
     .terminal-title {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     
     /* Main Content - Ultra compact on mobile */
