@@ -331,18 +331,18 @@ document.addEventListener('DOMContentLoaded', function() {
         'street-light': {
             title: 'Smart Street Light System',
             image: 'automata.jpg',
-            status: 'Research Phase',
-            statusClass: 'research',
-            description: 'Intelligent street lighting system with adaptive brightness, energy efficiency, and IoT connectivity. The system will feature motion detection, weather adaptation, remote monitoring, and integration with smart city infrastructure.',
-            techStack: ['IoT', 'Energy Efficiency', 'Smart City', 'Sensors', 'Arduino', 'Raspberry Pi', 'WiFi', 'Bluetooth'],
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'AI-enhanced smart streetlight system with real-time monitoring, predictive maintenance, anomaly detection, and energy optimization. Features a comprehensive web dashboard, ML pipeline for failure prediction, and IoT connectivity.',
+            techStack: ['IoT', 'Energy Efficiency', 'Smart City', 'Sensors', 'Arduino', 'Raspberry Pi', 'FastAPI', 'Next.js', 'Machine Learning', 'PostgreSQL'],
             timeline: [
-                { phase: 'Research Phase', duration: 'Ongoing', description: 'Technology research and feasibility studies' },
-                { phase: 'Prototype Development', duration: 'TBD', description: 'Hardware prototype and software development' },
+                { phase: 'Research Phase', duration: 'Completed', description: 'Technology research and feasibility studies' },
+                { phase: 'Prototype Development', duration: 'In Progress', description: 'Hardware prototype and software development with ML pipeline' },
                 { phase: 'Testing Phase', duration: 'TBD', description: 'Field testing and performance evaluation' }
             ],
             team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
             actions: [
-                { text: 'View GitHub', url: '#', icon: 'fab fa-github', primary: true },
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/streetlight', icon: 'fab fa-github', primary: true },
                 { text: 'Energy Analysis', url: '#', icon: 'fas fa-bolt', primary: false }
             ]
         },
@@ -465,6 +465,146 @@ document.addEventListener('DOMContentLoaded', function() {
             actions: [
                 { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/Sentiment-Analysis', icon: 'fab fa-github', primary: true }
             ]
+        },
+        'staffroom': {
+            title: 'Staffroom App',
+            image: 'automata.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'A comprehensive educational management platform like Google Classroom, designed for teachers to manage students, organizations, classes, attendance, resources, and discussions. Features both web application (Flask) and mobile app (Flutter) with full CRUD operations, role-based access control, organization management, discussion forums, resource management, attendance tracking, and schedule system.',
+            techStack: ['Flask', 'Flutter', 'Python', 'Dart', 'SQLite', 'REST API', 'Bootstrap', 'Provider', 'Werkzeug', 'Flask-CORS'],
+            timeline: [
+                { phase: 'Backend Development', duration: 'Ongoing', description: 'Flask backend with REST API, database schema design, authentication, and file uploads' },
+                { phase: 'Mobile App Development', duration: 'Ongoing', description: 'Flutter mobile app with Provider state management, API integration, and UI/UX design' },
+                { phase: 'Web Frontend', duration: 'Completed', description: 'Bootstrap-based web interface with full CRUD operations' },
+                { phase: 'Deployment', duration: 'Completed', description: 'Deployed on Render.com with mobile APK release' }
+            ],
+            team: ['Adnan Juwle (Backend & Deployment)', 'Naveen Kalage (Flutter Mobile App)', 'Siddhant Khobaragade (Cybersecurity & Authentication)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/staffroom', icon: 'fab fa-github', primary: true }
+            ]
+        },
+        // Juned's Projects
+        'elevator-automation': {
+            title: 'Elevator GAD Automation',
+            image: 'automata.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'AutoLISP automation programs for generating General Arrangement Drawings (GAD) for different elevator types. Reduces drawing time from hours to minutes with precise, formula-driven AutoCAD drawings. The system automates complex engineering calculations and generates accurate technical drawings for various elevator configurations.',
+            techStack: ['AutoLISP', 'AutoCAD', 'Automation', 'Engineering', 'CAD Programming', 'Formula-Based Design'],
+            timeline: [
+                { phase: 'Research & Planning', duration: 'Initial Phase', description: 'Analyzed elevator design requirements and drawing specifications' },
+                { phase: 'Development', duration: 'Ongoing', description: 'Created AutoLISP scripts for automated GAD generation with formula-driven calculations' },
+                { phase: 'Testing & Optimization', duration: 'Completed', description: 'Tested with various elevator types and optimized drawing accuracy' }
+            ],
+            team: ['Juned Jiya (Solo Developer)'],
+            actions: []
+        },
+        'triwheel-trolley': {
+            title: 'Triwheel Stair Climbing Trolley',
+            image: 'automata.jpg',
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'Innovative trolley design with triwheel mechanism for efficient stair climbing. Features adaptive wheel system and intelligent load distribution for various terrains. The design enables smooth transitions between flat surfaces and stairs, making it ideal for logistics and material handling applications.',
+            techStack: ['Mechanical Design', 'CAD', 'Prototyping', 'Materials', 'Mechanical Engineering', 'Product Design'],
+            timeline: [
+                { phase: 'Concept Design', duration: 'Initial Phase', description: 'Developed triwheel mechanism concept and initial design sketches' },
+                { phase: 'CAD Modeling', duration: 'In Progress', description: 'Creating detailed 3D models and engineering drawings' },
+                { phase: 'Prototyping', duration: 'Planned', description: 'Building physical prototype for testing and validation' }
+            ],
+            team: ['Juned Jiya (Hardware Design)'],
+            actions: []
+        },
+        'rover-hardware': {
+            title: 'Rover Hardware & Design',
+            image: 'automata.jpg',
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'Hardware design and integration for Prana and Automata rovers. Includes sensor integration, power management, and mechanical systems for autonomous operation. The system features robust power distribution, sensor fusion, and reliable mechanical components for field operation.',
+            techStack: ['Arduino', 'Sensors', 'Power Systems', 'Mechanical Design', 'Embedded Systems', 'IoT', 'Hardware Integration'],
+            timeline: [
+                { phase: 'System Architecture', duration: 'Completed', description: 'Designed overall hardware architecture and component selection' },
+                { phase: 'Hardware Integration', duration: 'In Progress', description: 'Integrating sensors, power systems, and control modules' },
+                { phase: 'Testing & Optimization', duration: 'Ongoing', description: 'Field testing and system optimization for reliability' }
+            ],
+            team: ['Juned Jiya (Hardware Design)', 'Adnan Juwle (AI/ML Integration)'],
+            actions: []
+        },
+        'charging-stand': {
+            title: '3D Printed Charging Stand',
+            image: 'automata.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Custom 3D printed charging stand with overhang design for efficient device charging. Features modular design and optimized cable management. The stand accommodates multiple devices simultaneously while maintaining a clean, organized workspace.',
+            techStack: ['3D Printing', 'CAD Design', 'Prototyping', 'Materials', 'Product Design', 'FDM Printing'],
+            timeline: [
+                { phase: 'Design Phase', duration: 'Completed', description: 'Created CAD models with overhang design and cable management features' },
+                { phase: 'Prototyping', duration: 'Completed', description: '3D printed and tested multiple iterations' },
+                { phase: 'Final Production', duration: 'Completed', description: 'Finalized design and produced finished product' }
+            ],
+            team: ['Juned Jiya (Solo Developer)'],
+            actions: []
+        },
+        // Siddhant's Projects
+        'prana-prototype': {
+            title: 'Prana Prototype App',
+            image: 'automata.jpg',
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'Complete UI/UX design and Kotlin development for the Prana agricultural rover prototype app. Features intuitive farmer interface, real-time data visualization, and seamless rover control. The app provides farmers with easy-to-use tools for monitoring soil conditions, controlling rover operations, and accessing agricultural insights.',
+            techStack: ['Kotlin', 'Android Studio', 'Figma', 'Material Design', 'UI/UX Design', 'Mobile Development', 'Android'],
+            timeline: [
+                { phase: 'UI/UX Design', duration: 'Completed', description: 'Created comprehensive design system and user interface mockups in Figma' },
+                { phase: 'Development', duration: 'In Progress', description: 'Implementing Kotlin-based Android application with Material Design' },
+                { phase: 'Testing & Integration', duration: 'Planned', description: 'Testing with rover hardware and refining user experience' }
+            ],
+            team: ['Siddhant Khobaragade (UI/UX & Development)', 'Adnan Juwle (AI/ML Backend)', 'Juned Jiya (Hardware Integration)'],
+            actions: []
+        },
+        'sbi-redesign': {
+            title: 'SBI Bank App Redesign',
+            image: 'automata.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Complete UI/UX redesign of SBI bank mobile application. Focused on improving user experience, accessibility, and modern design principles while maintaining brand consistency. The redesign enhances usability, reduces cognitive load, and improves accessibility for all users including those with disabilities.',
+            techStack: ['Figma', 'Adobe XD', 'User Research', 'Accessibility', 'UI/UX Design', 'Design Systems', 'Prototyping'],
+            timeline: [
+                { phase: 'User Research', duration: 'Completed', description: 'Conducted user interviews and analyzed existing app pain points' },
+                { phase: 'Design Phase', duration: 'Completed', description: 'Created new design system with improved accessibility and modern UI' },
+                { phase: 'Prototyping & Testing', duration: 'Completed', description: 'Built interactive prototypes and conducted usability testing' }
+            ],
+            team: ['Siddhant Khobaragade (Solo Designer)'],
+            actions: []
+        },
+        'mobile-design-system': {
+            title: 'Mobile Design System',
+            image: 'automata.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Comprehensive design system for mobile applications. Includes component library, design tokens, accessibility guidelines, and responsive design patterns for consistent user experience. The system ensures design consistency across multiple applications and provides reusable components for rapid development.',
+            techStack: ['Figma', 'Design Tokens', 'Component Library', 'Prototyping', 'Design Systems', 'UI/UX Design'],
+            timeline: [
+                { phase: 'Research & Planning', duration: 'Completed', description: 'Analyzed design requirements and established design principles' },
+                { phase: 'Component Development', duration: 'Completed', description: 'Created comprehensive component library with variants and states' },
+                { phase: 'Documentation', duration: 'Completed', description: 'Documented design tokens, usage guidelines, and accessibility standards' }
+            ],
+            team: ['Siddhant Khobaragade (Solo Designer)'],
+            actions: []
+        },
+        'kotlin-apps': {
+            title: 'Kotlin Mobile Apps',
+            image: 'automata.jpg',
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'Collection of Kotlin-based mobile applications showcasing modern Android development practices. Features Jetpack Compose, MVVM architecture, and Material Design 3 implementation. The apps demonstrate best practices in Android development including clean architecture, reactive programming, and modern UI frameworks.',
+            techStack: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Material Design 3', 'Android', 'Mobile Development', 'Architecture'],
+            timeline: [
+                { phase: 'Architecture Setup', duration: 'Completed', description: 'Established MVVM architecture and project structure' },
+                { phase: 'Development', duration: 'In Progress', description: 'Building apps with Jetpack Compose and Material Design 3' },
+                { phase: 'Testing & Refinement', duration: 'Ongoing', description: 'Testing apps and refining user experience' }
+            ],
+            team: ['Siddhant Khobaragade (Solo Developer)'],
+            actions: []
         }
     };
     
@@ -484,8 +624,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('modalTitle').textContent = project.title;
         document.getElementById('modalImage').src = project.image;
         document.getElementById('modalImage').alt = project.title;
-        document.getElementById('modalStatus').textContent = project.status;
-        document.getElementById('modalStatus').className = `status-badge ${project.statusClass}`;
+        
+        // Update status badge if it exists
+        const modalStatus = document.getElementById('modalStatus');
+        if (modalStatus) {
+            modalStatus.textContent = project.status;
+            modalStatus.className = `status-badge ${project.statusClass}`;
+        }
+        
         document.getElementById('modalDescription').textContent = project.description;
         
         // Update tech stack
@@ -538,12 +684,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Close modal
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
     
     window.addEventListener('click', (event) => {
-        if (event.target === modal) {
+        if (modal && event.target === modal) {
             modal.style.display = 'none';
         }
     });

@@ -202,7 +202,7 @@
                     <span class="output">Scanning project repositories...</span>
                 </div>
                 <div class="output-line">
-                    <span class="output">Found 7 personal projects</span>
+                    <span class="output">Found 8 personal projects</span>
                 </div>
                 <div class="output-line">
                     <span class="output success">✓ Projects loaded</span>
@@ -229,9 +229,6 @@
                             <span class="tech-tag">Pandas</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/AI-Medical-Diagnosis-System" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                             <button class="project-details-btn" data-project="medical-ai">View Details</button>
                         </div>
                     </div>
@@ -256,9 +253,6 @@
                             <span class="tech-tag">Python</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/VisionAid" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                             <button class="project-details-btn" data-project="vision-aid">View Details</button>
                         </div>
                     </div>
@@ -283,9 +277,6 @@
                             <span class="tech-tag">Summarization</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/AI-Powered-Smart-Lecture-Summarizer-1" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                             <button class="project-details-btn" data-project="lecture-summarizer">View Details</button>
                         </div>
                     </div>
@@ -310,12 +301,6 @@
                             <span class="tech-tag">Offline AI</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/Kamil_v1" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Version 1
-                            </a>
-                            <a href="https://github.com/AdnanJuwle/Kamil_v2" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Version 2
-                            </a>
                             <button class="project-details-btn" data-project="kamil-ai">View Details</button>
                         </div>
                     </div>
@@ -340,9 +325,6 @@
                             <span class="tech-tag">Python</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/player-tracking-system" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                             <button class="project-details-btn" data-project="player-tracking">View Details</button>
                         </div>
                     </div>
@@ -367,9 +349,6 @@
                             <span class="tech-tag">Pandas</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/trader-behaviour-analysis" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                             <button class="project-details-btn" data-project="trader-analysis">View Details</button>
                         </div>
                     </div>
@@ -394,10 +373,32 @@
                             <span class="tech-tag">TextBlob</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AdnanJuwle/Sentiment-Analysis" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                             <button class="project-details-btn" data-project="sentiment-analysis">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="staffroom">
+                    <div class="project-header">
+                        <div class="project-icon">🏫</div>
+                        <div class="project-info">
+                            <h3 class="project-name">Staffroom App</h3>
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">A comprehensive educational management platform like Google Classroom, designed for teachers to manage students, organizations, classes, attendance, resources, and discussions. Features both web and mobile applications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-details-btn" data-project="staffroom">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -528,20 +529,23 @@
                     <img id="modalImage" src="" alt="">
                 </div>
                 <div class="modal-info">
-                    <div class="modal-description">
+                    <div class="project-status-modal">
+                        <span id="modalStatus" class="status-badge"></span>
+                    </div>
+                    <div class="project-description">
                         <h3>Description</h3>
                         <p id="modalDescription"></p>
                     </div>
                     <div class="tech-stack">
-                        <h3>Tech Stack</h3>
+                        <h3>Technology Stack</h3>
                         <div id="modalTech"></div>
                     </div>
                     <div class="timeline">
-                        <h3>Timeline</h3>
+                        <h3>Project Timeline</h3>
                         <div id="modalTimeline"></div>
                     </div>
                     <div class="team-members">
-                        <h3>Team</h3>
+                        <h3>Team Members</h3>
                         <div id="modalTeam"></div>
                     </div>
                 </div>
