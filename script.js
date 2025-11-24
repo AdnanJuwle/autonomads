@@ -346,6 +346,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 { text: 'Energy Analysis', url: '#', icon: 'fas fa-bolt', primary: false }
             ]
         },
+        'siem-nas': {
+            title: 'SIEM on Raspberry Pi NAS',
+            image: 'automata.jpg',
+            status: 'In Development',
+            statusClass: 'development',
+            description: 'System Information and Event Management (SIEM) system deployed on Raspberry Pi NAS. Features ML-powered intrusion detection, unusual traffic detection, and anomalous behavior analysis. The system monitors network events, analyzes patterns using machine learning algorithms, and alerts on security threats in real-time.',
+            techStack: ['SIEM', 'Machine Learning', 'Raspberry Pi', 'NAS', 'Intrusion Detection', 'Cybersecurity', 'Python', 'Network Security', 'Anomaly Detection', 'Traffic Analysis'],
+            timeline: [
+                { phase: 'System Architecture', duration: 'Completed', description: 'Designed SIEM architecture for Raspberry Pi NAS deployment' },
+                { phase: 'ML Model Development', duration: 'In Progress', description: 'Developing machine learning models for intrusion detection and anomaly detection' },
+                { phase: 'Integration & Testing', duration: 'Ongoing', description: 'Integrating ML models with SIEM system and testing on real network traffic' },
+                { phase: 'Deployment & Optimization', duration: 'Planned', description: 'Deploying on Raspberry Pi NAS and optimizing performance' }
+            ],
+            team: ['Siddhant Khobaragade (Cybersecurity & ML)', 'Adnan Juwle (AI/ML Lead)'],
+            actions: []
+        },
         // Personal Projects Data
         'medical-ai': {
             title: 'AI Medical Diagnosis System',
