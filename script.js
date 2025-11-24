@@ -605,6 +605,23 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             team: ['Siddhant Khobaragade (Solo Developer)'],
             actions: []
+        },
+        'kootlipi': {
+            title: 'Kootlipi - Deterministic Password Manager',
+            image: 'automata.jpg',
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'A lightweight browser extension for Chrome & Firefox that generates strong, site-specific passwords from your master passphrase. Uses PBKDF2 cryptography with SHA-256 and 200,000 iterations. Never stores passwords - everything is derived locally with cryptography. Features automatic form filling, session-based password history, and configurable password length (8-64 characters).',
+            techStack: ['JavaScript', 'Browser Extension', 'Chrome Extension', 'Firefox Extension', 'Cryptography', 'PBKDF2', 'SHA-256', 'Web Crypto API', 'Manifest V3', 'Content Scripts'],
+            timeline: [
+                { phase: 'Research & Design', duration: 'Initial Phase', description: 'Researched deterministic password generation and PBKDF2 implementation' },
+                { phase: 'Development', duration: 'Completed', description: 'Built Chrome extension with cryptographic password generation and automatic form filling' },
+                { phase: 'Testing & Release', duration: 'Completed', description: 'Tested on various websites and released v0.1.0' }
+            ],
+            team: ['Siddhant Khobaragade (Solo Developer)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/sid-vid/Kootlipi', icon: 'fab fa-github', primary: true }
+            ]
         }
     };
     
@@ -658,13 +675,50 @@ document.addEventListener('DOMContentLoaded', function() {
             timelineContainer.appendChild(phaseDiv);
         });
         
-        // Update team members
+        // Update team members with clickable links
         const teamContainer = document.getElementById('modalTeam');
         teamContainer.innerHTML = '';
+        
+        // Map team member names to their portfolio pages
+        const memberPortfolioMap = {
+            'Adnan Juwle': 'portfolio-adnan.html',
+            'Juned Jiya': 'portfolio-juned.html',
+            'Siddhant Khobaragade': 'portfolio-siddhant.html',
+            'Naveen Kalage': '#' // No portfolio page yet
+        };
+        
         project.team.forEach(member => {
             const memberDiv = document.createElement('div');
             memberDiv.className = 'team-member-item';
-            memberDiv.textContent = member;
+            
+            // Extract name from member string (format: "Name (Role)" or just "Name")
+            const memberMatch = member.match(/^([^(]+?)(?:\s*\([^)]+\))?$/);
+            const memberName = memberMatch ? memberMatch[1].trim() : member.trim();
+            
+            // Check if we have a portfolio page for this member
+            const portfolioUrl = memberPortfolioMap[memberName];
+            
+            if (portfolioUrl && portfolioUrl !== '#') {
+                // Create clickable link
+                const memberLink = document.createElement('a');
+                memberLink.href = portfolioUrl;
+                memberLink.className = 'team-member-link';
+                memberLink.textContent = member;
+                memberLink.title = `View ${memberName}'s portfolio`;
+                
+                // Close modal when link is clicked (optional - can be removed if you want modal to stay open)
+                memberLink.addEventListener('click', () => {
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+                
+                memberDiv.appendChild(memberLink);
+            } else {
+                // Just display as text if no portfolio page
+                memberDiv.textContent = member;
+            }
+            
             teamContainer.appendChild(memberDiv);
         });
         
