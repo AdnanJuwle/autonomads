@@ -80,7 +80,7 @@ cd autonomads
 2. Open the website:
    - **Option 1**: Simply open `index.html` in your web browser
    - **Option 2**: Use a local web server for development:
-     ```bash
+```bash
      # Using Python 3
      python -m http.server 8000
      

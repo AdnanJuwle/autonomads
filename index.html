@@ -502,8 +502,8 @@
                 <button class="close-btn">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalImage" src="" alt="">
+                <div class="modal-image" id="modalImageContainer">
+                    <!-- Images will be inserted here -->
                 </div>
                 <div class="modal-info">
                     <div class="project-status-modal">
@@ -530,6 +530,17 @@
             <div class="modal-footer">
                 <div id="modalActions"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="lightbox-modal">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+        <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-counter" id="lightboxCounter"></div>
         </div>
     </div>
 

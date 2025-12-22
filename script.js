@@ -468,7 +468,11 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'sentiment-analysis': {
             title: 'Sentiment Analysis Tool',
-            image: 'sentiment-analysis.jpg',
+            image: [
+                'sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM.jpeg',
+                'sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(1).jpeg',
+                'sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(2).jpeg'
+            ],
             status: 'Completed',
             statusClass: 'completed',
             description: 'Simple sentiment analysis tool for analyzing text data. Built as a quick side project to understand natural language processing basics.',
@@ -655,8 +659,38 @@ document.addEventListener('DOMContentLoaded', function() {
     function openProjectModal(project) {
         // Update modal content
         document.getElementById('modalTitle').textContent = project.title;
-        document.getElementById('modalImage').src = project.image;
-        document.getElementById('modalImage').alt = project.title;
+        
+        // Handle images - support both single image (string) and multiple images (array)
+        const imageContainer = document.getElementById('modalImageContainer');
+        imageContainer.innerHTML = ''; // Clear previous images
+        
+        // Store images array for lightbox navigation
+        const imagesArray = Array.isArray(project.image) ? project.image : [project.image];
+        window.currentLightboxImages = imagesArray; // Store globally for lightbox
+        
+        if (Array.isArray(project.image)) {
+            // Multiple images - display vertically
+            project.image.forEach((imgSrc, index) => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = `${project.title} - Image ${index + 1}`;
+                img.className = 'modal-image-item';
+                img.style.cursor = 'pointer';
+                img.dataset.index = index;
+                img.addEventListener('click', () => window.openLightbox(index, imagesArray));
+                imageContainer.appendChild(img);
+            });
+        } else {
+            // Single image
+            const img = document.createElement('img');
+            img.src = project.image;
+            img.alt = project.title;
+            img.className = 'modal-image-item';
+            img.style.cursor = 'pointer';
+            img.dataset.index = '0';
+            img.addEventListener('click', () => window.openLightbox(0, imagesArray));
+            imageContainer.appendChild(img);
+        }
         
         // Update status badge if it exists
         const modalStatus = document.getElementById('modalStatus');
@@ -732,7 +766,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 memberDiv.appendChild(memberLink);
             } else {
                 // Just display as text if no portfolio page
-                memberDiv.textContent = member;
+            memberDiv.textContent = member;
             }
             
             teamContainer.appendChild(memberDiv);
@@ -755,9 +789,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close modal
     if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
     }
     
     window.addEventListener('click', (event) => {
@@ -918,4 +952,131 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize lazy loading and preload critical images
     initializeLazyLoading();
     preloadCriticalImages();
+    
+    // Lightbox functionality
+    let currentImageIndex = 0;
+    let lightboxImages = [];
+    let lightboxScale = 1;
+    
+    window.openLightbox = function(index, images) {
+        lightboxImages = images;
+        currentImageIndex = index;
+        lightboxScale = 1; // Reset zoom
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        
+        if (lightbox && lightboxImage) {
+            lightboxImage.src = images[index];
+            lightboxImage.alt = `Image ${index + 1} of ${images.length}`;
+            lightboxImage.style.transform = 'scale(1)';
+            updateLightboxCounter();
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    };
+    
+    function closeLightbox() {
+        const lightbox = document.getElementById('imageLightbox');
+        if (lightbox) {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+            lightboxScale = 1;
+        }
+    }
+    
+    function showNextImage() {
+        if (lightboxImages.length > 0) {
+            currentImageIndex = (currentImageIndex + 1) % lightboxImages.length;
+            lightboxScale = 1; // Reset zoom when changing image
+            const lightboxImage = document.getElementById('lightboxImage');
+            if (lightboxImage) {
+                lightboxImage.src = lightboxImages[currentImageIndex];
+                lightboxImage.alt = `Image ${currentImageIndex + 1} of ${lightboxImages.length}`;
+                lightboxImage.style.transform = 'scale(1)';
+                updateLightboxCounter();
+            }
+        }
+    }
+    
+    function showPrevImage() {
+        if (lightboxImages.length > 0) {
+            currentImageIndex = (currentImageIndex - 1 + lightboxImages.length) % lightboxImages.length;
+            lightboxScale = 1; // Reset zoom when changing image
+            const lightboxImage = document.getElementById('lightboxImage');
+            if (lightboxImage) {
+                lightboxImage.src = lightboxImages[currentImageIndex];
+                lightboxImage.alt = `Image ${currentImageIndex + 1} of ${lightboxImages.length}`;
+                lightboxImage.style.transform = 'scale(1)';
+                updateLightboxCounter();
+            }
+        }
+    }
+    
+    function updateLightboxCounter() {
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        if (lightboxCounter && lightboxImages.length > 1) {
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${lightboxImages.length}`;
+        } else if (lightboxCounter) {
+            lightboxCounter.textContent = '';
+        }
+    }
+    
+    // Lightbox event listeners
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+    
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showNextImage();
+        });
+    }
+    
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showPrevImage();
+        });
+    }
+    
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+    
+    // Keyboard navigation for lightbox
+    document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('imageLightbox');
+        if (lightbox && lightbox.style.display === 'flex') {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'ArrowLeft') {
+                showPrevImage();
+            }
+        }
+    });
+    
+    // Zoom functionality with mouse wheel
+    if (lightboxImage) {
+        lightboxImage.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            lightboxScale = Math.max(0.5, Math.min(3, lightboxScale + delta));
+            lightboxImage.style.transform = `scale(${lightboxScale})`;
+            lightboxImage.style.transition = 'transform 0.1s ease';
+        });
+    }
 });
