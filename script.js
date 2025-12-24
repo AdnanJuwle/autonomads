@@ -1,5 +1,27 @@
 // Hybrid Terminal-Professional JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    // Auto-update active projects count
+    function updateActiveProjectsCount() {
+        const projectCards = document.querySelectorAll('.projects-grid .project-card');
+        const countElement = document.getElementById('activeProjectsCount');
+        if (countElement && projectCards.length > 0) {
+            countElement.textContent = projectCards.length + '+';
+        }
+    }
+    
+    // Update count on page load
+    updateActiveProjectsCount();
+    
+    // Update count when projects section becomes active (in case of dynamic loading)
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+        const observer = new MutationObserver(() => {
+            if (projectsSection.classList.contains('active')) {
+                updateActiveProjectsCount();
+            }
+        });
+        observer.observe(projectsSection, { attributes: true, attributeFilter: ['class'] });
+    }
     // Navigation functionality
     const navItems = document.querySelectorAll('.nav-item');
     const contentSections = document.querySelectorAll('.content-section');
