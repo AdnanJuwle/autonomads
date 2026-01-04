@@ -889,7 +889,8 @@ body {
     color: var(--terminal-bg);
 }
 
-.status-badge.on-hold {
+.status-badge.on-hold,
+.status-badge.status-on-hold {
     background: #888888;
     color: var(--terminal-bg);
 }
