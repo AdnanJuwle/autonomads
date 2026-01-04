@@ -262,8 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'prana': {
             title: 'Prana Soil Analysis Rover',
             image: 'media/projects/team_automata/automata.jpg',
-            status: 'Research Phase',
-            statusClass: 'research',
+            status: 'In Development',
+            statusClass: 'development',
             description: 'AI-powered autonomous rover for comprehensive soil analysis and agricultural insights. The rover will analyze soil composition, moisture levels, pH, nutrient content, and other critical agricultural parameters to provide farmers with actionable insights for optimal crop management.',
             techStack: ['AI/ML', 'Robotics', 'IoT', 'Computer Vision', 'Python', 'TensorFlow', 'OpenCV', 'Arduino'],
             timeline: [
@@ -280,8 +280,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'automata': {
             title: 'Automata Planting & Weeding Rover',
             image: 'media/projects/team_automata/automata.jpg',
-            status: 'In Development',
-            statusClass: 'development',
+            status: 'Paused',
+            statusClass: 'paused',
             description: 'Autonomous agricultural rover for precision planting and intelligent weed management. The rover will use computer vision to identify weeds, perform precision planting, and maintain crops with minimal human intervention.',
             techStack: ['Computer Vision', 'Robotics', 'Automation', 'AI', 'Python', 'OpenCV', 'ROS', 'Arduino'],
             timeline: [
