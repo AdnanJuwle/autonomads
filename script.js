@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectData = {
         'prana': {
             title: 'Prana Soil Analysis Rover',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Research Phase',
             statusClass: 'research',
             description: 'AI-powered autonomous rover for comprehensive soil analysis and agricultural insights. The rover will analyze soil composition, moisture levels, pH, nutrient content, and other critical agricultural parameters to provide farmers with actionable insights for optimal crop management.',
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'automata': {
             title: 'Automata Planting & Weeding Rover',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Autonomous agricultural rover for precision planting and intelligent weed management. The rover will use computer vision to identify weeds, perform precision planting, and maintain crops with minimal human intervention.',
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'droneswarm': {
             title: 'Swarm Drone System',
-            image: 'images/projects/droneswarm.jpg',
+            image: 'images/projects/team_droneswarm/droneswarm.jpg',
             status: 'Planning Phase',
             statusClass: 'planning',
             description: 'Coordinated drone swarm for surveillance, mapping, and emergency response applications. The system will feature intelligent coordination algorithms, autonomous flight patterns, and real-time communication between drones.',
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'batman': {
             title: 'Batman Suit',
-            image: 'images/projects/batman.webp',
+            image: 'images/projects/team_batman/batman.webp',
             status: 'Planning Phase',
             statusClass: 'planning',
             description: 'Advanced wearable technology suit with integrated sensors, communication systems, and smart features. This continuous side project will feature cutting-edge wearable technology, biometric monitoring, and integrated communication systems.',
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'batpod': {
             title: 'Batpod Bike',
-            image: 'images/projects/batpod.jpg',
+            image: 'images/projects/team_batpod/batpod.jpg',
             status: 'Planning Phase',
             statusClass: 'planning',
             description: 'Autonomous motorcycle with advanced navigation, safety systems, and smart connectivity features. This ambitious project will feature autonomous driving capabilities, advanced safety systems, and integration with smart city infrastructure.',
@@ -352,15 +352,18 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'street-light': {
             title: 'Smart Street Light System',
-            image: 'images/projects/automata.jpg',
-            status: 'In Development',
-            statusClass: 'development',
+            image: [
+                'images/projects/team_smart_streetlight/WhatsApp Image 2026-01-03 at 2.09.42 PM.jpeg',
+                'images/projects/team_smart_streetlight/WhatsApp Image 2026-01-03 at 2.09.42 PM(1).jpeg'
+            ],
+            status: 'Completed',
+            statusClass: 'completed',
             description: 'AI-enhanced smart streetlight system with real-time monitoring, predictive maintenance, anomaly detection, and energy optimization. Features a comprehensive web dashboard, ML pipeline for failure prediction, and IoT connectivity.',
             techStack: ['IoT', 'Energy Efficiency', 'Smart City', 'Sensors', 'Arduino', 'Raspberry Pi', 'FastAPI', 'Next.js', 'Machine Learning', 'PostgreSQL'],
             timeline: [
                 { phase: 'Research Phase', duration: 'Completed', description: 'Technology research and feasibility studies' },
-                { phase: 'Prototype Development', duration: 'In Progress', description: 'Hardware prototype and software development with ML pipeline' },
-                { phase: 'Testing Phase', duration: 'TBD', description: 'Field testing and performance evaluation' }
+                { phase: 'Prototype Development', duration: 'Completed', description: 'Hardware prototype and software development with ML pipeline' },
+                { phase: 'Testing Phase', duration: 'Completed', description: 'Field testing and performance evaluation' }
             ],
             team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
             actions: [
@@ -370,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'siem-nas': {
             title: 'SIEM on Raspberry Pi NAS',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'System Information and Event Management (SIEM) system deployed on Raspberry Pi NAS. Features ML-powered intrusion detection, unusual traffic detection, and anomalous behavior analysis. The system monitors network events, analyzes patterns using machine learning algorithms, and alerts on security threats in real-time.',
@@ -388,8 +391,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'medical-ai': {
             title: 'AI Medical Diagnosis System',
             image: [
-                'images/projects/medical_diagnosis/Untitled.jpg',
-                'images/projects/medical_diagnosis/Untitled1.jpg'
+                'images/projects/adnan_medical_diagnosis/Untitled.jpg',
+                'images/projects/adnan_medical_diagnosis/Untitled1.jpg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -494,9 +497,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'sentiment-analysis': {
             title: 'Sentiment Analysis Tool',
             image: [
-                'images/projects/sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM.jpeg',
-                'images/projects/sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(1).jpeg',
-                'images/projects/sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(2).jpeg'
+                'images/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM.jpeg',
+                'images/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(1).jpeg',
+                'images/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(2).jpeg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -513,7 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'staffroom': {
             title: 'Staffroom App',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'A comprehensive educational management platform like Google Classroom, designed for teachers to manage students, organizations, classes, attendance, resources, and discussions. Features both web application (Flask) and mobile app (Flutter) with full CRUD operations, role-based access control, organization management, discussion forums, resource management, attendance tracking, and schedule system.',
@@ -532,8 +535,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'subscription-management': {
             title: 'Subscription Management',
             image: [
-                'images/projects/subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM.jpeg',
-                'images/projects/subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM(1).jpeg'
+                'images/projects/adnan_subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM.jpeg',
+                'images/projects/adnan_subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM(1).jpeg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -553,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Juned's Projects
         'elevator-automation': {
             title: 'Elevator GAD Automation',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'AutoLISP automation programs for generating General Arrangement Drawings (GAD) for different elevator types. Reduces drawing time from hours to minutes with precise, formula-driven AutoCAD drawings. The system automates complex engineering calculations and generates accurate technical drawings for various elevator configurations.',
@@ -568,7 +571,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'triwheel-trolley': {
             title: 'Triwheel Stair Climbing Trolley',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Innovative trolley design with triwheel mechanism for efficient stair climbing. Features adaptive wheel system and intelligent load distribution for various terrains. The design enables smooth transitions between flat surfaces and stairs, making it ideal for logistics and material handling applications.',
@@ -583,7 +586,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'rover-hardware': {
             title: 'Rover Hardware & Design',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Hardware design and integration for Prana and Automata rovers. Includes sensor integration, power management, and mechanical systems for autonomous operation. The system features robust power distribution, sensor fusion, and reliable mechanical components for field operation.',
@@ -598,7 +601,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'charging-stand': {
             title: '3D Printed Charging Stand',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'Custom 3D printed charging stand with overhang design for efficient device charging. Features modular design and optimized cable management. The stand accommodates multiple devices simultaneously while maintaining a clean, organized workspace.',
@@ -611,10 +614,34 @@ document.addEventListener('DOMContentLoaded', function() {
             team: ['Juned Jiya (Solo Developer)'],
             actions: []
         },
+        'juned-streetlight': {
+            title: 'Smart Street Light System',
+            image: [
+                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.27 PM.jpeg',
+                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM.jpeg',
+                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM(1).jpeg',
+                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM(3).jpeg'
+            ],
+            status: 'Completed',
+            statusClass: 'completed',
+            description: 'Intelligent streetlight monitoring system that detects faulty lights and reports to the central system with GPS coordinates. Features infrared sensors to detect approaching vehicles and automatically turn on lights. The system provides real-time monitoring, fault detection, and energy-efficient operation without AI components.',
+            techStack: ['Arduino', 'ESP32', 'GPS', 'Infrared Sensors', 'IoT', 'Hardware Design', 'Sensor Integration', 'Energy Efficiency'],
+            timeline: [
+                { phase: 'Hardware Design', duration: 'Completed', description: 'Designed and integrated Arduino-based system with GPS module and IR sensors' },
+                { phase: 'Sensor Integration', duration: 'Completed', description: 'Integrated infrared sensors for vehicle detection and automatic light control' },
+                { phase: 'Fault Detection System', duration: 'Completed', description: 'Implemented fault detection and reporting system with GPS coordinates' },
+                { phase: 'Testing & Deployment', duration: 'Completed', description: 'Field testing and system deployment' }
+            ],
+            team: ['Juned Jiya (Hardware Design & Development)'],
+            actions: [
+                { text: 'View GitHub', url: 'https://github.com/junedjiya/streetlight', icon: 'fab fa-github', primary: true },
+                { text: 'Documentation', url: 'documentation/juned_smart_streetlight/finalreportprint.pdf', icon: 'fas fa-file-pdf', primary: false, type: 'documentation' }
+            ]
+        },
         // Siddhant's Projects
         'prana-prototype': {
             title: 'Prana Prototype App',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Complete UI/UX design and Kotlin development for the Prana agricultural rover prototype app. Features intuitive farmer interface, real-time data visualization, and seamless rover control. The app provides farmers with easy-to-use tools for monitoring soil conditions, controlling rover operations, and accessing agricultural insights.',
@@ -629,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'sbi-redesign': {
             title: 'SBI Bank App Redesign',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'Complete UI/UX redesign of SBI bank mobile application. Focused on improving user experience, accessibility, and modern design principles while maintaining brand consistency. The redesign enhances usability, reduces cognitive load, and improves accessibility for all users including those with disabilities.',
@@ -644,7 +671,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'mobile-design-system': {
             title: 'Mobile Design System',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'Comprehensive design system for mobile applications. Includes component library, design tokens, accessibility guidelines, and responsive design patterns for consistent user experience. The system ensures design consistency across multiple applications and provides reusable components for rapid development.',
@@ -659,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'kotlin-apps': {
             title: 'Kotlin Mobile Apps',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Collection of Kotlin-based mobile applications showcasing modern Android development practices. Features Jetpack Compose, MVVM architecture, and Material Design 3 implementation. The apps demonstrate best practices in Android development including clean architecture, reactive programming, and modern UI frameworks.',
@@ -674,7 +701,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'kootlipi': {
             title: 'Kootlipi - Deterministic Password Manager',
-            image: 'images/projects/automata.jpg',
+            image: 'images/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'A lightweight browser extension for Chrome & Firefox that generates strong, site-specific passwords from your master passphrase. Uses PBKDF2 cryptography with SHA-256 and 200,000 iterations. Never stores passwords - everything is derived locally with cryptography. Features automatic form filling, session-based password history, and configurable password length (8-64 characters).',
@@ -826,6 +853,19 @@ document.addEventListener('DOMContentLoaded', function() {
             actionBtn.href = action.url;
             actionBtn.className = `modal-btn ${action.primary ? 'modal-btn-primary' : 'modal-btn-secondary'}`;
             actionBtn.innerHTML = `<i class="${action.icon}"></i> ${action.text}`;
+            
+            // Handle documentation links (PDFs, etc.) - open in new tab
+            if (action.type === 'documentation' || action.url.endsWith('.pdf') || action.url.includes('documentation/')) {
+                actionBtn.target = '_blank';
+                actionBtn.rel = 'noopener noreferrer';
+            }
+            
+            // External links (GitHub, etc.) also open in new tab
+            if (action.url.startsWith('http://') || action.url.startsWith('https://')) {
+                actionBtn.target = '_blank';
+                actionBtn.rel = 'noopener noreferrer';
+            }
+            
             actionsContainer.appendChild(actionBtn);
         });
         
@@ -983,10 +1023,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'images/team/adnan.avif',
             'images/team/juned.jpg', 
             'images/team/siddhant.jpg',
-            'images/projects/automata.jpg',
-            'images/projects/batman.webp',
-            'images/projects/batpod.jpg',
-            'images/projects/droneswarm.jpg'
+            'images/projects/team_automata/automata.jpg',
+            'images/projects/team_batman/batman.webp',
+            'images/projects/team_batpod/batpod.jpg',
+            'images/projects/team_droneswarm/droneswarm.jpg'
         ];
         
         criticalImages.forEach(src => {

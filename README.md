@@ -47,9 +47,6 @@ autonomads/
 ├── portfolio-siddhant.html # Siddhant's portfolio page
 ├── styles.css              # Main stylesheet
 ├── script.js               # JavaScript functionality
-├── requirements.txt        # Python dependencies (for preprocessing scripts)
-├── create_proper_preprocessing.py  # Data preprocessing utility
-├── fix_preprocessing.py    # Preprocessing fix utility
 ├── README.md              # This file
 └── [image files]          # Team photos and project images
 ```
@@ -186,5 +183,3 @@ This project is for portfolio and educational purposes. All rights reserved.
 - The Autonomads team for their dedication to autonomous systems
 
 ---
-
-**Note**: The Python preprocessing scripts (`create_proper_preprocessing.py` and `fix_preprocessing.py`) are utility scripts from a previous project and are not required for the website to function.
