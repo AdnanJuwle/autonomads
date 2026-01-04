@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { phase: 'Planning', duration: 'April 2025', description: 'Initial planning and architecture design' },
                 { phase: 'Version 1 Development', duration: 'June 1-20, 2025', description: 'First version development' },
                 { phase: 'Version 2 Development', duration: 'June 2025', description: 'Improved second version' },
-                { phase: 'Paused', duration: 'June 20, 2025 - December 2025', description: 'Project paused for other priorities' },
+                { phase: 'Paused', duration: 'June 20, 2025 - December 2025', description: 'Project paused due to hardware limitations' },
                 { phase: 'Resumed Development', duration: 'January 2026 - Present', description: 'Project resumed and actively in development' }
             ],
             team: ['Adnan Juwle (Solo Developer)'],
