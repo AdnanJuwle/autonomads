@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectData = {
         'prana': {
             title: 'Prana Soil Analysis Rover',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Research Phase',
             statusClass: 'research',
             description: 'AI-powered autonomous rover for comprehensive soil analysis and agricultural insights. The rover will analyze soil composition, moisture levels, pH, nutrient content, and other critical agricultural parameters to provide farmers with actionable insights for optimal crop management.',
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'automata': {
             title: 'Automata Planting & Weeding Rover',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Autonomous agricultural rover for precision planting and intelligent weed management. The rover will use computer vision to identify weeds, perform precision planting, and maintain crops with minimal human intervention.',
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'droneswarm': {
             title: 'Swarm Drone System',
-            image: 'images/projects/team_droneswarm/droneswarm.jpg',
+            image: 'media/projects/team_droneswarm/droneswarm.jpg',
             status: 'Planning Phase',
             statusClass: 'planning',
             description: 'Coordinated drone swarm for surveillance, mapping, and emergency response applications. The system will feature intelligent coordination algorithms, autonomous flight patterns, and real-time communication between drones.',
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'batman': {
             title: 'Batman Suit',
-            image: 'images/projects/team_batman/batman.webp',
+            image: 'media/projects/team_batman/batman.webp',
             status: 'Planning Phase',
             statusClass: 'planning',
             description: 'Advanced wearable technology suit with integrated sensors, communication systems, and smart features. This continuous side project will feature cutting-edge wearable technology, biometric monitoring, and integrated communication systems.',
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'batpod': {
             title: 'Batpod Bike',
-            image: 'images/projects/team_batpod/batpod.jpg',
+            image: 'media/projects/team_batpod/batpod.jpg',
             status: 'Planning Phase',
             statusClass: 'planning',
             description: 'Autonomous motorcycle with advanced navigation, safety systems, and smart connectivity features. This ambitious project will feature autonomous driving capabilities, advanced safety systems, and integration with smart city infrastructure.',
@@ -353,8 +353,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'street-light': {
             title: 'Smart Street Light System',
             image: [
-                'images/projects/team_smart_streetlight/WhatsApp Image 2026-01-03 at 2.09.42 PM.jpeg',
-                'images/projects/team_smart_streetlight/WhatsApp Image 2026-01-03 at 2.09.42 PM(1).jpeg'
+                'media/projects/team_smart_streetlight/WhatsApp Image 2026-01-03 at 2.09.42 PM.jpeg',
+                'media/projects/team_smart_streetlight/WhatsApp Image 2026-01-03 at 2.09.42 PM(1).jpeg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'siem-nas': {
             title: 'SIEM on Raspberry Pi NAS',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'System Information and Event Management (SIEM) system deployed on Raspberry Pi NAS. Features ML-powered intrusion detection, unusual traffic detection, and anomalous behavior analysis. The system monitors network events, analyzes patterns using machine learning algorithms, and alerts on security threats in real-time.',
@@ -391,8 +391,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'medical-ai': {
             title: 'AI Medical Diagnosis System',
             image: [
-                'images/projects/adnan_medical_diagnosis/Untitled.jpg',
-                'images/projects/adnan_medical_diagnosis/Untitled1.jpg'
+                'media/projects/adnan_medical_diagnosis/Untitled.jpg',
+                'media/projects/adnan_medical_diagnosis/Untitled1.jpg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -497,9 +497,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'sentiment-analysis': {
             title: 'Sentiment Analysis Tool',
             image: [
-                'images/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM.jpeg',
-                'images/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(1).jpeg',
-                'images/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(2).jpeg'
+                'media/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM.jpeg',
+                'media/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(1).jpeg',
+                'media/projects/adnan_sentiment_analysis/WhatsApp Image 2025-12-22 at 5.55.30 PM(2).jpeg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'staffroom': {
             title: 'Staffroom App',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'A comprehensive educational management platform like Google Classroom, designed for teachers to manage students, organizations, classes, attendance, resources, and discussions. Features both web application (Flask) and mobile app (Flutter) with full CRUD operations, role-based access control, organization management, discussion forums, resource management, attendance tracking, and schedule system.',
@@ -535,8 +535,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'subscription-management': {
             title: 'Subscription Management',
             image: [
-                'images/projects/adnan_subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM.jpeg',
-                'images/projects/adnan_subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM(1).jpeg'
+                'media/projects/adnan_subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM.jpeg',
+                'media/projects/adnan_subscription_management/WhatsApp Image 2025-12-24 at 8.04.22 AM(1).jpeg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Juned's Projects
         'elevator-automation': {
             title: 'Elevator GAD Automation',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'AutoLISP automation programs for generating General Arrangement Drawings (GAD) for different elevator types. Reduces drawing time from hours to minutes with precise, formula-driven AutoCAD drawings. The system automates complex engineering calculations and generates accurate technical drawings for various elevator configurations.',
@@ -571,22 +571,30 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'triwheel-trolley': {
             title: 'Triwheel Stair Climbing Trolley',
-            image: 'images/projects/team_automata/automata.jpg',
-            status: 'In Development',
-            statusClass: 'development',
+            image: [
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Image 2026-01-04 at 8.12.18 PM.jpeg',
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Image 2026-01-04 at 8.12.18 PM(1).jpeg',
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Image 2026-01-04 at 8.12.18 PM(2).jpeg',
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Image 2026-01-04 at 8.12.18 PM(3).jpeg',
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Image 2026-01-04 at 8.13.10 PM.jpeg',
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Video 2026-01-04 at 8.10.59 PM.mp4',
+                'media/projects/juned_triwheel_stairclimbing_trolley/WhatsApp Video 2026-01-04 at 8.11.06 PM.mp4'
+            ],
+            status: 'Completed',
+            statusClass: 'completed',
             description: 'Innovative trolley design with triwheel mechanism for efficient stair climbing. Features adaptive wheel system and intelligent load distribution for various terrains. The design enables smooth transitions between flat surfaces and stairs, making it ideal for logistics and material handling applications.',
             techStack: ['Mechanical Design', 'CAD', 'Prototyping', 'Materials', 'Mechanical Engineering', 'Product Design'],
             timeline: [
-                { phase: 'Concept Design', duration: 'Initial Phase', description: 'Developed triwheel mechanism concept and initial design sketches' },
-                { phase: 'CAD Modeling', duration: 'In Progress', description: 'Creating detailed 3D models and engineering drawings' },
-                { phase: 'Prototyping', duration: 'Planned', description: 'Building physical prototype for testing and validation' }
+                { phase: 'Concept Design', duration: 'Completed', description: 'Developed triwheel mechanism concept and initial design sketches' },
+                { phase: 'CAD Modeling', duration: 'Completed', description: 'Created detailed 3D models and engineering drawings' },
+                { phase: 'Prototyping', duration: 'Completed', description: 'Built physical prototype and completed testing and validation' }
             ],
             team: ['Juned Jiya (Hardware Design)'],
             actions: []
         },
         'rover-hardware': {
             title: 'Rover Hardware & Design',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Hardware design and integration for Prana and Automata rovers. Includes sensor integration, power management, and mechanical systems for autonomous operation. The system features robust power distribution, sensor fusion, and reliable mechanical components for field operation.',
@@ -601,7 +609,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'charging-stand': {
             title: '3D Printed Charging Stand',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'Custom 3D printed charging stand with overhang design for efficient device charging. Features modular design and optimized cable management. The stand accommodates multiple devices simultaneously while maintaining a clean, organized workspace.',
@@ -617,10 +625,10 @@ document.addEventListener('DOMContentLoaded', function() {
         'juned-streetlight': {
             title: 'Smart Street Light System',
             image: [
-                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.27 PM.jpeg',
-                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM.jpeg',
-                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM(1).jpeg',
-                'images/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM(3).jpeg'
+                'media/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.27 PM.jpeg',
+                'media/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM.jpeg',
+                'media/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM(1).jpeg',
+                'media/projects/juned_smart_streetlight/WhatsApp Image 2026-01-04 at 1.12.28 PM(3).jpeg'
             ],
             status: 'Completed',
             statusClass: 'completed',
@@ -641,7 +649,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Siddhant's Projects
         'prana-prototype': {
             title: 'Prana Prototype App',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Complete UI/UX design and Kotlin development for the Prana agricultural rover prototype app. Features intuitive farmer interface, real-time data visualization, and seamless rover control. The app provides farmers with easy-to-use tools for monitoring soil conditions, controlling rover operations, and accessing agricultural insights.',
@@ -656,7 +664,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'sbi-redesign': {
             title: 'SBI Bank App Redesign',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'Complete UI/UX redesign of SBI bank mobile application. Focused on improving user experience, accessibility, and modern design principles while maintaining brand consistency. The redesign enhances usability, reduces cognitive load, and improves accessibility for all users including those with disabilities.',
@@ -671,7 +679,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'mobile-design-system': {
             title: 'Mobile Design System',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'Comprehensive design system for mobile applications. Includes component library, design tokens, accessibility guidelines, and responsive design patterns for consistent user experience. The system ensures design consistency across multiple applications and provides reusable components for rapid development.',
@@ -686,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'kotlin-apps': {
             title: 'Kotlin Mobile Apps',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'In Development',
             statusClass: 'development',
             description: 'Collection of Kotlin-based mobile applications showcasing modern Android development practices. Features Jetpack Compose, MVVM architecture, and Material Design 3 implementation. The apps demonstrate best practices in Android development including clean architecture, reactive programming, and modern UI frameworks.',
@@ -701,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'kootlipi': {
             title: 'Kootlipi - Deterministic Password Manager',
-            image: 'images/projects/team_automata/automata.jpg',
+            image: 'media/projects/team_automata/automata.jpg',
             status: 'Completed',
             statusClass: 'completed',
             description: 'A lightweight browser extension for Chrome & Firefox that generates strong, site-specific passwords from your master passphrase. Uses PBKDF2 cryptography with SHA-256 and 200,000 iterations. Never stores passwords - everything is derived locally with cryptography. Features automatic form filling, session-based password history, and configurable password length (8-64 characters).',
@@ -733,36 +741,67 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update modal content
         document.getElementById('modalTitle').textContent = project.title;
         
-        // Handle images - support both single image (string) and multiple images (array)
+        // Handle media - support both single media (string) and multiple media (array)
+        // Media can be images or videos
         const imageContainer = document.getElementById('modalImageContainer');
-        imageContainer.innerHTML = ''; // Clear previous images
+        imageContainer.innerHTML = ''; // Clear previous media
         
-        // Store images array for lightbox navigation
-        const imagesArray = Array.isArray(project.image) ? project.image : [project.image];
-        window.currentLightboxImages = imagesArray; // Store globally for lightbox
+        // Store media array for lightbox navigation
+        const mediaArray = Array.isArray(project.image) ? project.image : [project.image];
+        window.currentLightboxImages = mediaArray; // Store globally for lightbox
+        
+        // Helper function to check if file is a video
+        const isVideo = (src) => {
+            const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi'];
+            return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
+        };
         
         if (Array.isArray(project.image)) {
-            // Multiple images - display vertically
-            project.image.forEach((imgSrc, index) => {
-                const img = document.createElement('img');
-                img.src = imgSrc;
-                img.alt = `${project.title} - Image ${index + 1}`;
-                img.className = 'modal-image-item';
-                img.style.cursor = 'pointer';
-                img.dataset.index = index;
-                img.addEventListener('click', () => window.openLightbox(index, imagesArray));
-                imageContainer.appendChild(img);
+            // Multiple media items - display vertically
+            project.image.forEach((mediaSrc, index) => {
+                if (isVideo(mediaSrc)) {
+                    // Create video element
+                    const video = document.createElement('video');
+                    video.src = mediaSrc;
+                    video.controls = true;
+                    video.className = 'modal-image-item';
+                    video.style.cursor = 'pointer';
+                    video.dataset.index = index;
+                    video.addEventListener('click', () => window.openLightbox(index, mediaArray));
+                    imageContainer.appendChild(video);
+                } else {
+                    // Create image element
+                    const img = document.createElement('img');
+                    img.src = mediaSrc;
+                    img.alt = `${project.title} - Image ${index + 1}`;
+                    img.className = 'modal-image-item';
+                    img.style.cursor = 'pointer';
+                    img.dataset.index = index;
+                    img.addEventListener('click', () => window.openLightbox(index, mediaArray));
+                    imageContainer.appendChild(img);
+                }
             });
         } else {
-            // Single image
-            const img = document.createElement('img');
-            img.src = project.image;
-            img.alt = project.title;
-            img.className = 'modal-image-item';
-            img.style.cursor = 'pointer';
-            img.dataset.index = '0';
-            img.addEventListener('click', () => window.openLightbox(0, imagesArray));
-            imageContainer.appendChild(img);
+            // Single media item
+            if (isVideo(project.image)) {
+                const video = document.createElement('video');
+                video.src = project.image;
+                video.controls = true;
+                video.className = 'modal-image-item';
+                video.style.cursor = 'pointer';
+                video.dataset.index = '0';
+                video.addEventListener('click', () => window.openLightbox(0, mediaArray));
+                imageContainer.appendChild(video);
+            } else {
+                const img = document.createElement('img');
+                img.src = project.image;
+                img.alt = project.title;
+                img.className = 'modal-image-item';
+                img.style.cursor = 'pointer';
+                img.dataset.index = '0';
+                img.addEventListener('click', () => window.openLightbox(0, mediaArray));
+                imageContainer.appendChild(img);
+            }
         }
         
         // Update status badge if it exists
@@ -1020,13 +1059,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preload critical images
     function preloadCriticalImages() {
         const criticalImages = [
-            'images/team/adnan.avif',
-            'images/team/juned.jpg', 
-            'images/team/siddhant.jpg',
-            'images/projects/team_automata/automata.jpg',
-            'images/projects/team_batman/batman.webp',
-            'images/projects/team_batpod/batpod.jpg',
-            'images/projects/team_droneswarm/droneswarm.jpg'
+            'media/team/adnan.avif',
+            'media/team/juned.jpg', 
+            'media/team/siddhant.jpg',
+            'media/projects/team_automata/automata.jpg',
+            'media/projects/team_batman/batman.webp',
+            'media/projects/team_batpod/batpod.jpg',
+            'media/projects/team_droneswarm/droneswarm.jpg'
         ];
         
         criticalImages.forEach(src => {
@@ -1044,18 +1083,55 @@ document.addEventListener('DOMContentLoaded', function() {
     let lightboxImages = [];
     let lightboxScale = 1;
     
-    window.openLightbox = function(index, images) {
-        lightboxImages = images;
+    // Helper function to check if file is a video
+    const isVideoFile = (src) => {
+        const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi'];
+        return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
+    };
+    
+    window.openLightbox = function(index, media) {
+        lightboxImages = media;
         currentImageIndex = index;
         lightboxScale = 1; // Reset zoom
         const lightbox = document.getElementById('imageLightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxContent = lightbox ? lightbox.querySelector('.lightbox-content') : null;
         const lightboxCounter = document.getElementById('lightboxCounter');
         
-        if (lightbox && lightboxImage) {
-            lightboxImage.src = images[index];
-            lightboxImage.alt = `Image ${index + 1} of ${images.length}`;
-            lightboxImage.style.transform = 'scale(1)';
+        if (lightbox && lightboxContent) {
+            // Remove existing media element
+            const existingMedia = lightboxContent.querySelector('#lightboxImage, #lightboxVideo');
+            if (existingMedia) {
+                existingMedia.remove();
+            }
+            
+            const mediaSrc = media[index];
+            let mediaElement;
+            
+            if (isVideoFile(mediaSrc)) {
+                // Create video element
+                mediaElement = document.createElement('video');
+                mediaElement.id = 'lightboxVideo';
+                mediaElement.src = mediaSrc;
+                mediaElement.controls = true;
+                mediaElement.style.maxWidth = '90vw';
+                mediaElement.style.maxHeight = '90vh';
+                mediaElement.style.objectFit = 'contain';
+            } else {
+                // Create image element
+                mediaElement = document.createElement('img');
+                mediaElement.id = 'lightboxImage';
+                mediaElement.src = mediaSrc;
+                mediaElement.alt = `Media ${index + 1} of ${media.length}`;
+                mediaElement.style.transform = 'scale(1)';
+            }
+            
+            // Insert before counter
+            if (lightboxCounter) {
+                lightboxContent.insertBefore(mediaElement, lightboxCounter);
+            } else {
+                lightboxContent.appendChild(mediaElement);
+            }
+            
             updateLightboxCounter();
             lightbox.style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -1074,12 +1150,43 @@ document.addEventListener('DOMContentLoaded', function() {
     function showNextImage() {
         if (lightboxImages.length > 0) {
             currentImageIndex = (currentImageIndex + 1) % lightboxImages.length;
-            lightboxScale = 1; // Reset zoom when changing image
-            const lightboxImage = document.getElementById('lightboxImage');
-            if (lightboxImage) {
-                lightboxImage.src = lightboxImages[currentImageIndex];
-                lightboxImage.alt = `Image ${currentImageIndex + 1} of ${lightboxImages.length}`;
-                lightboxImage.style.transform = 'scale(1)';
+            lightboxScale = 1; // Reset zoom when changing media
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxContent = lightbox ? lightbox.querySelector('.lightbox-content') : null;
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            
+            if (lightboxContent) {
+                // Remove existing media element
+                const existingMedia = lightboxContent.querySelector('#lightboxImage, #lightboxVideo');
+                if (existingMedia) {
+                    existingMedia.remove();
+                }
+                
+                const mediaSrc = lightboxImages[currentImageIndex];
+                let mediaElement;
+                
+                if (isVideoFile(mediaSrc)) {
+                    mediaElement = document.createElement('video');
+                    mediaElement.id = 'lightboxVideo';
+                    mediaElement.src = mediaSrc;
+                    mediaElement.controls = true;
+                    mediaElement.style.maxWidth = '90vw';
+                    mediaElement.style.maxHeight = '90vh';
+                    mediaElement.style.objectFit = 'contain';
+                } else {
+                    mediaElement = document.createElement('img');
+                    mediaElement.id = 'lightboxImage';
+                    mediaElement.src = mediaSrc;
+                    mediaElement.alt = `Media ${currentImageIndex + 1} of ${lightboxImages.length}`;
+                    mediaElement.style.transform = 'scale(1)';
+                }
+                
+                if (lightboxCounter) {
+                    lightboxContent.insertBefore(mediaElement, lightboxCounter);
+                } else {
+                    lightboxContent.appendChild(mediaElement);
+                }
+                
                 updateLightboxCounter();
             }
         }
@@ -1088,12 +1195,43 @@ document.addEventListener('DOMContentLoaded', function() {
     function showPrevImage() {
         if (lightboxImages.length > 0) {
             currentImageIndex = (currentImageIndex - 1 + lightboxImages.length) % lightboxImages.length;
-            lightboxScale = 1; // Reset zoom when changing image
-            const lightboxImage = document.getElementById('lightboxImage');
-            if (lightboxImage) {
-                lightboxImage.src = lightboxImages[currentImageIndex];
-                lightboxImage.alt = `Image ${currentImageIndex + 1} of ${lightboxImages.length}`;
-                lightboxImage.style.transform = 'scale(1)';
+            lightboxScale = 1; // Reset zoom when changing media
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxContent = lightbox ? lightbox.querySelector('.lightbox-content') : null;
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            
+            if (lightboxContent) {
+                // Remove existing media element
+                const existingMedia = lightboxContent.querySelector('#lightboxImage, #lightboxVideo');
+                if (existingMedia) {
+                    existingMedia.remove();
+                }
+                
+                const mediaSrc = lightboxImages[currentImageIndex];
+                let mediaElement;
+                
+                if (isVideoFile(mediaSrc)) {
+                    mediaElement = document.createElement('video');
+                    mediaElement.id = 'lightboxVideo';
+                    mediaElement.src = mediaSrc;
+                    mediaElement.controls = true;
+                    mediaElement.style.maxWidth = '90vw';
+                    mediaElement.style.maxHeight = '90vh';
+                    mediaElement.style.objectFit = 'contain';
+                } else {
+                    mediaElement = document.createElement('img');
+                    mediaElement.id = 'lightboxImage';
+                    mediaElement.src = mediaSrc;
+                    mediaElement.alt = `Media ${currentImageIndex + 1} of ${lightboxImages.length}`;
+                    mediaElement.style.transform = 'scale(1)';
+                }
+                
+                if (lightboxCounter) {
+                    lightboxContent.insertBefore(mediaElement, lightboxCounter);
+                } else {
+                    lightboxContent.appendChild(mediaElement);
+                }
+                
                 updateLightboxCounter();
             }
         }
@@ -1155,14 +1293,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Zoom functionality with mouse wheel
-    if (lightboxImage) {
-        lightboxImage.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            const delta = e.deltaY > 0 ? -0.1 : 0.1;
-            lightboxScale = Math.max(0.5, Math.min(3, lightboxScale + delta));
-            lightboxImage.style.transform = `scale(${lightboxScale})`;
-            lightboxImage.style.transition = 'transform 0.1s ease';
+    // Zoom functionality with mouse wheel (for images only, videos have their own controls)
+    const lightboxContent = document.querySelector('#imageLightbox .lightbox-content');
+    if (lightboxContent) {
+        lightboxContent.addEventListener('wheel', (e) => {
+            const mediaElement = lightboxContent.querySelector('#lightboxImage');
+            // Only apply zoom to images, not videos
+            if (mediaElement && !lightboxContent.querySelector('#lightboxVideo')) {
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? -0.1 : 0.1;
+                lightboxScale = Math.max(0.5, Math.min(3, lightboxScale + delta));
+                mediaElement.style.transform = `scale(${lightboxScale})`;
+                mediaElement.style.transition = 'transform 0.1s ease';
+            }
         });
     }
 });
