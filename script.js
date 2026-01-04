@@ -610,7 +610,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'charging-stand': {
             title: '3D Printed Charging Stand',
-            image: 'media/projects/team_automata/automata.jpg',
+            image: [
+                'media/projects/juned_charging_stand/WhatsApp Image 2026-01-04 at 8.29.03 PM.jpeg',
+                'media/projects/juned_charging_stand/WhatsApp Image 2026-01-04 at 8.29.03 PM(1).jpeg',
+                'media/projects/juned_charging_stand/WhatsApp Image 2026-01-04 at 8.29.03 PM(2).jpeg',
+                'media/projects/juned_charging_stand/WhatsApp Image 2026-01-04 at 8.29.03 PM(3).jpeg',
+                'media/projects/juned_charging_stand/WhatsApp Image 2026-01-04 at 8.29.04 PM.jpeg',
+                'media/projects/juned_charging_stand/WhatsApp Video 2026-01-04 at 8.29.03 PM.mp4'
+            ],
             status: 'Completed',
             statusClass: 'completed',
             description: 'Custom 3D printed charging stand with overhang design for efficient device charging. Features modular design and optimized cable management. The stand accommodates multiple devices simultaneously while maintaining a clean, organized workspace.',
