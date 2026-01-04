@@ -371,6 +371,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 { text: 'Documentation', url: 'documentation/team_smart_streetlight/smartstreetlight.pdf', icon: 'fas fa-file-pdf', primary: false, type: 'documentation' }
             ]
         },
+        'smart-water-management': {
+            title: 'Smart Water Flow & Motor Management System',
+            image: 'media/projects/team_automata/automata.jpg',
+            status: 'Research Phase',
+            statusClass: 'research',
+            description: 'AI-powered water management system for Indian homes with borewell-based water supply. Digitizes and intelligently manages water distribution, motor control, and tank monitoring. Features three intelligence layers: sensing (sensors), control (actuators), and AI assistance (Kamil integration). Provides predictive refill suggestions, leak detection, fault diagnosis, and natural language control while maintaining user control and safety.',
+            techStack: ['ESP32', 'IoT', 'Sensors', 'Motor Control', 'Kamil AI', 'Machine Learning', 'Mobile App', 'Web App', 'Predictive Analytics', 'Natural Language Processing'],
+            timeline: [
+                { phase: 'Research & Planning', duration: 'In Progress', description: 'System architecture design, sensor selection, and AI integration planning with Kamil' },
+                { phase: 'Hardware Design', duration: 'Planned', description: 'Design sensor network, motor control circuits, and valve automation system' },
+                { phase: 'Software Development', duration: 'Planned', description: 'Develop mobile/web app, ESP32 firmware, and Kamil AI integration' },
+                { phase: 'AI Integration', duration: 'Planned', description: 'Implement predictive intelligence, fault detection, and natural language interface with Kamil' },
+                { phase: 'Testing & Deployment', duration: 'Planned', description: 'Field testing, safety validation, and optimization' }
+            ],
+            team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
+            actions: []
+        },
         'siem-nas': {
             title: 'SIEM on Raspberry Pi NAS',
             image: 'media/projects/team_automata/automata.jpg',
