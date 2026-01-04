@@ -889,6 +889,11 @@ body {
     color: var(--terminal-bg);
 }
 
+.status-badge.on-hold {
+    background: #888888;
+    color: var(--terminal-bg);
+}
+
 .project-content {
     margin-top: var(--space-lg);
 }

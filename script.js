@@ -299,8 +299,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'droneswarm': {
             title: 'Swarm Drone System',
             image: 'media/projects/team_droneswarm/droneswarm.jpg',
-            status: 'Planning Phase',
-            statusClass: 'planning',
+            status: 'On Hold',
+            statusClass: 'on-hold',
             description: 'Coordinated drone swarm for surveillance, mapping, and emergency response applications. The system will feature intelligent coordination algorithms, autonomous flight patterns, and real-time communication between drones.',
             techStack: ['Swarm Intelligence', 'UAV', 'Coordination', 'Communication', 'Python', 'ROS', 'Computer Vision', 'IoT'],
             timeline: [
@@ -317,8 +317,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'batman': {
             title: 'Batman Suit',
             image: 'media/projects/team_batman/batman.webp',
-            status: 'Planning Phase',
-            statusClass: 'planning',
+            status: 'On Hold',
+            statusClass: 'on-hold',
             description: 'Advanced wearable technology suit with integrated sensors, communication systems, and smart features. This continuous side project will feature cutting-edge wearable technology, biometric monitoring, and integrated communication systems.',
             techStack: ['Wearable Tech', 'IoT', 'Sensors', 'Smart Materials', 'Arduino', 'Raspberry Pi', 'Bluetooth', 'WiFi'],
             timeline: [
@@ -335,8 +335,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'batpod': {
             title: 'Batpod Bike',
             image: 'media/projects/team_batpod/batpod.jpg',
-            status: 'Planning Phase',
-            statusClass: 'planning',
+            status: 'On Hold',
+            statusClass: 'on-hold',
             description: 'Autonomous motorcycle with advanced navigation, safety systems, and smart connectivity features. This ambitious project will feature autonomous driving capabilities, advanced safety systems, and integration with smart city infrastructure.',
             techStack: ['Autonomous Vehicles', 'Navigation', 'Safety Systems', 'IoT', 'Computer Vision', 'Machine Learning', 'GPS', 'Sensors'],
             timeline: [
