@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
             team: ['Adnan Juwle (AI/ML Lead)', 'Juned Jiya (Hardware Design)'],
             actions: [
                 { text: 'View GitHub', url: 'https://github.com/AdnanJuwle/streetlight', icon: 'fab fa-github', primary: true },
-                { text: 'Energy Analysis', url: '#', icon: 'fas fa-bolt', primary: false }
+                { text: 'Documentation', url: 'documentation/team_smart_streetlight/smartstreetlight.pdf', icon: 'fas fa-file-pdf', primary: false, type: 'documentation' }
             ]
         },
         'siem-nas': {
