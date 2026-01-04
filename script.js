@@ -557,18 +557,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Juned's Projects
         'elevator-automation': {
             title: 'Elevator GAD Automation',
-            image: 'media/projects/team_automata/automata.jpg',
+            image: [
+                'media/projects/juned_gad_elevator_automation/Screenshot (336).png',
+                'media/projects/juned_gad_elevator_automation/Screenshot (337).png',
+                'media/projects/juned_gad_elevator_automation/Screenshot 2026-01-04 204408.png'
+            ],
             status: 'Completed',
             statusClass: 'completed',
             description: 'AutoLISP automation programs for generating General Arrangement Drawings (GAD) for different elevator types. Reduces drawing time from hours to minutes with precise, formula-driven AutoCAD drawings. The system automates complex engineering calculations and generates accurate technical drawings for various elevator configurations.',
             techStack: ['AutoLISP', 'AutoCAD', 'Automation', 'Engineering', 'CAD Programming', 'Formula-Based Design'],
             timeline: [
                 { phase: 'Research & Planning', duration: 'Initial Phase', description: 'Analyzed elevator design requirements and drawing specifications' },
-                { phase: 'Development', duration: 'Ongoing', description: 'Created AutoLISP scripts for automated GAD generation with formula-driven calculations' },
+                { phase: 'Development', duration: 'Completed', description: 'Created AutoLISP scripts for automated GAD generation with formula-driven calculations' },
                 { phase: 'Testing & Optimization', duration: 'Completed', description: 'Tested with various elevator types and optimized drawing accuracy' }
             ],
             team: ['Juned Jiya (Solo Developer)'],
-            actions: []
+            actions: [
+                { text: 'View LinkedIn', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7360699717426511873/', icon: 'fab fa-linkedin', primary: true }
+            ]
         },
         'triwheel-trolley': {
             title: 'Triwheel Stair Climbing Trolley',
