@@ -670,14 +670,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 'media/projects/juned_home_stair_lift_system/Screenshot (340).png',
                 'media/projects/juned_home_stair_lift_system/WhatsApp Video 2026-01-04 at 8.59.16 PM.mp4'
             ],
-            status: 'In Development',
-            statusClass: 'development',
+            status: 'Completed',
+            statusClass: 'completed',
             description: 'Innovative residential stair lift system designed to transport heavy household items like refrigerators, washing machines, and furniture between floors. Features an extendable ladder structure with integrated pulley arrangement, motorized lifting mechanism, and safety rails. Solves the challenge of moving heavy objects up stairs safely and efficiently.',
             techStack: ['Mechanical Design', 'CAD', 'Pulley Systems', 'Motor Control', 'Rails & Guides', 'Lifting Mechanisms', 'Safety Engineering', 'Structural Design'],
             timeline: [
-                { phase: 'Concept Design', duration: 'In Progress', description: 'Designing extendable ladder structure with pulley and rail system' },
-                { phase: 'Mechanical Engineering', duration: 'Planned', description: 'Calculating load capacity, motor specifications, and safety factors' },
-                { phase: 'Prototyping', duration: 'Planned', description: 'Building and testing prototype with various load scenarios' }
+                { phase: 'Concept Design', duration: 'Completed', description: 'Designed extendable ladder structure with pulley and rail system' },
+                { phase: 'Mechanical Engineering', duration: 'Completed', description: 'Calculated load capacity, motor specifications, and safety factors' },
+                { phase: 'Prototyping', duration: 'Completed', description: 'Built and tested prototype with various load scenarios' }
             ],
             team: ['Juned Jiya (Solo Developer)'],
             actions: []
