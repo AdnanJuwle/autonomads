@@ -446,15 +446,16 @@ document.addEventListener('DOMContentLoaded', function() {
         'kamil-ai': {
             title: 'Kamil AI Assistant',
             image: 'kamil-ai.jpg',
-            status: 'Paused',
-            statusClass: 'paused',
+            status: 'In Development',
+            statusClass: 'development',
             description: 'Built-in offline AI brain using multiple LLMs to provide different functions. A comprehensive AI assistant designed to work without internet connectivity.',
             techStack: ['Python', 'LLMs', 'Offline AI', 'Local Processing', 'Multiple Models'],
             timeline: [
                 { phase: 'Planning', duration: 'April 2025', description: 'Initial planning and architecture design' },
                 { phase: 'Version 1 Development', duration: 'June 1-20, 2025', description: 'First version development' },
                 { phase: 'Version 2 Development', duration: 'June 2025', description: 'Improved second version' },
-                { phase: 'Paused', duration: 'June 20, 2025 - Present', description: 'Project currently paused' }
+                { phase: 'Paused', duration: 'June 20, 2025 - December 2025', description: 'Project paused for other priorities' },
+                { phase: 'Resumed Development', duration: 'January 2026 - Present', description: 'Project resumed and actively in development' }
             ],
             team: ['Adnan Juwle (Solo Developer)'],
             actions: [

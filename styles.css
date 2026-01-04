@@ -880,7 +880,7 @@ body {
 }
 
 .status-badge.development {
-    background: var(--terminal-success);
+    background: #ffaa00;
     color: var(--terminal-bg);
 }
 
